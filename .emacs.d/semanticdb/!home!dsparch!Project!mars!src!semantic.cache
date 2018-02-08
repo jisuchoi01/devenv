@@ -1,0 +1,266 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [1 20])
+            ("stdio.h" include (:system-flag t) nil [21 39])
+            ("opencv/cv.h" include (:system-flag t) nil [40 62])
+            ("Test" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [76 83])
+                    ("Test" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :type ("Test" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [88 95])
+                    ("Test" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [100 116])
+                    ("public" label nil (reparse-symbol classsubparts) [118 125])
+                    ("TestClassPrint" function
+                       (:pure-virtual-flag t
+                        :prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [130 157])
+                    ("TestClassPrint2" function
+                       (:pure-virtual-flag t
+                        :prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [162 190]))                  
+                :type "class")
+                nil [63 193])
+            ("TestFunctionPrint" function (:type "void") nil [195 250])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [261 270])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [271 284]))                  
+                :type "int")
+                nil [252 406]))          
+      :file "test.c"
+      :pointmax 407
+      :fsize 398
+      :lastmodtime '(23152 40209 295976 363000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("unistd.h" include (:system-flag t) nil [20 39])
+            ("linux/input.h" include (:system-flag t) nil [40 64])
+            ("errno.h" include (:system-flag t) nil [65 83])
+            ("fcntl.h" include (:system-flag t) nil [84 102])
+            ("sys/types.h" include (:system-flag t) nil [103 125])
+            ("sys/stat.h" include (:system-flag t) nil [126 147])
+            ("sys/time.h" include (:system-flag t) nil [148 169])
+            ("string.h" include (:system-flag t) nil [170 189])
+            ("stdlib.h" include (:system-flag t) nil [190 209])
+            ("iostream" include (:system-flag t) nil [211 230])
+            ("algorithm" include (:system-flag t) nil [231 251])
+            ("opencv2/core/core.hpp" include (:system-flag t) nil [255 287])
+            ("opencv2/core/utility.hpp" include (:system-flag t) nil [288 323])
+            ("opencv2/imgcodecs.hpp" include (:system-flag t) nil [324 356])
+            ("opencv2/core/ocl.hpp" include (:system-flag t) nil [357 388])
+            ("opencv2/highgui/highgui.hpp" include (:system-flag t) nil [389 427])
+            ("opencv2/imgproc/imgproc.hpp" include (:system-flag t) nil [428 466])
+            ("opencv2/xfeatures2d.hpp" include (:system-flag t) nil [467 501])
+            ("opencv2/calib3d.hpp" include nil nil [502 532])
+            ("touch_event.h" include nil nil [534 558])
+            ("cv" using (:type ("cv" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [560 579])
+            ("cv::xfeatures2d" using (:type ("cv::xfeatures2d" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [580 612])
+            ("GOOD_PTS_MAX" variable
+               (:constant-flag t
+                :default-value "50"
+                :type "int")
+                nil [614 642])
+            ("GOOD_PORTION" variable
+               (:constant-flag t
+                :default-value "0.15f"
+                :type "float")
+                nil [643 676])
+            ("work_begin" variable
+               (:default-value "0"
+                :type ("int64" type (:type "class") nil nil))
+                nil [678 699])
+            ("work_end" variable
+               (:default-value "0"
+                :type ("int64" type (:type "class") nil nil))
+                nil [700 719])
+            ("workBegin" function
+               (:typemodifiers ("static")
+                :type "void")
+                nil [722 782])
+            ("workEnd" function
+               (:typemodifiers ("static")
+                :type "void")
+                nil [784 853])
+            ("getTime" function
+               (:typemodifiers ("static")
+                :type "double")
+                nil [855 941])
+            ("SURFDetector" type
+               (:members 
+                  ( ("surf" variable (:type ("Ptr" type
+                         (:template-specifier 
+                            ( ("Feature2D" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [969 989])
+                    ("SURFDetector" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("hessian" variable
+                               (:default-value "800.0"
+                                :type "double")
+                                (reparse-symbol arg-sub-list) [1007 1029]))                          
+                        :type ("SURFDetector" type (:type "struct") nil nil))
+                        (reparse-symbol classsubparts) [994 1080])
+                    ("()" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type "void"
+                        :arguments 
+                          ( ("in" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1123 1135])
+                            ("mask" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1136 1150])
+                            ("pts" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("cv::KeyPoint" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [1151 1182])
+                            ("descriptors" variable
+                               (:reference 1
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1183 1198])
+                            ("useProvided" variable
+                               (:default-value "false"
+                                :type "bool")
+                                (reparse-symbol arg-sub-list) [1199 1223]))                          
+                        :operator-flag t)
+                        (reparse-symbol classsubparts) [1085 1309]))                  
+                :type "struct")
+                nil [943 1312])
+            ("SURFMatcher" type
+               (:template 
+                  ( ("KPMatcher" type (:type "class") nil nil))                  
+                :type "struct"
+                :members 
+                  ( ("matcher" variable (:type ("KPMatcher" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1365 1383])
+                    ("match" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type "void"
+                        :arguments 
+                          ( ("in1" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1421 1434])
+                            ("in2" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1435 1448])
+                            ("matches" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("cv::DMatch" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [1449 1482]))                          )
+                        (reparse-symbol classsubparts) [1388 1536]))                  )
+                nil [1314 1539])
+            ("drawGoodMatches" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("input_img" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Mat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1573 1594])
+                    ("img2" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Mat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1599 1615])
+                    ("keypoints1" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("KeyPoint" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1620 1660])
+                    ("keypoints2" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("KeyPoint" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1665 1705])
+                    ("matches" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("DMatch" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1710 1739])
+                    ("scene_corners_" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("Point2f" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1744 1786]))                  
+                :type ("Mat" type (:type "class") nil nil))
+                nil [1541 4319])
+            ("innerAngle" function
+               (:arguments 
+                  ( ("px1" variable (:type "float") (reparse-symbol arg-sub-list) [4339 4349])
+                    ("py1" variable (:type "float") (reparse-symbol arg-sub-list) [4350 4360])
+                    ("px2" variable (:type "float") (reparse-symbol arg-sub-list) [4361 4371])
+                    ("py2" variable (:type "float") (reparse-symbol arg-sub-list) [4372 4382])
+                    ("cx1" variable (:type "float") (reparse-symbol arg-sub-list) [4383 4393])
+                    ("cy1" variable (:type "float") (reparse-symbol arg-sub-list) [4394 4404]))                  
+                :type "float")
+                nil [4322 5133])
+            ("main" function (:type "int") nil [5136 10390]))          
+      :file "main.cpp"
+      :pointmax 10391
+      :fsize 10410
+      :lastmodtime '(23162 51989 580906 313000)
+      :unmatched-syntax nil))
+  :file "!home!dsparch!Project!mars!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

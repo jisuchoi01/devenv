@@ -1,0 +1,60 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [1 20])
+            ("opencv2/opencv.hpp" include (:system-flag t) nil [21 50])
+            ("cv" using (:type ("cv" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [52 71])
+            ("Test" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [85 92])
+                    ("Test" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :type ("Test" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [97 104])
+                    ("Test" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [109 125])
+                    ("public" label nil (reparse-symbol classsubparts) [127 134])
+                    ("TestClassPrint" function
+                       (:pure-virtual-flag t
+                        :prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [139 166])
+                    ("TestClassPrint2" function
+                       (:pure-virtual-flag t
+                        :prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [171 199]))                  
+                :type "class")
+                nil [72 202])
+            ("TestFunctionPrint" function (:type "void") nil [204 259])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [270 279])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [280 293]))                  
+                :type "int")
+                nil [261 467]))          
+      :file "test.c"
+      :pointmax 469
+      :fsize 468
+      :lastmodtime '(23163 51118 171555 865000)
+      :unmatched-syntax nil))
+  :file "!home!dsparch!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,29 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("cv.h" include (:system-flag t) nil [1 16])
+            ("highgui.h" include (:system-flag t) nil [17 37])
+            ("ctype.h" include (:system-flag t) nil [38 56])
+            ("stdio.h" include (:system-flag t) nil [57 75])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [87 96])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [97 109]))                  
+                :type "int")
+                nil [77 3970]))          
+      :file "main.cpp"
+      :pointmax 3971
+      :fsize 4508
+      :lastmodtime '(23161 19686 672407 464000)
+      :unmatched-syntax nil))
+  :file "!home!dsparch!Project!dynamic_BG_seperation!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")
