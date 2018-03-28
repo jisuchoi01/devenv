@@ -6,7 +6,17 @@
 	     '("melpa" . "https://melpa.milkbox.net/packages/"))
 (package-initialize)
 
+
 ;; 자동 완성 ;;
+
+;; python 자동 완성
+(require 'auto-virtualenv)
+(add-hook 'python-mode-hook 'auto-virtualenv-set-virtualenv)
+(add-hook 'projectile-after-switch-project-hook 'auto-virtualenv-set-virtualenv)
+(add-hook 'python-mode-hook 'anaconda-eldoc-mode)
+(autoload 'jedi:setup "jedi" nil t)
+(add-hook 'python-mode-hook 'jedi:setup)
+(setq jedi:complete-on-dot t)
 
 ;; auto-complete c/c++ 헤더 자동 완성 포함 내용
 (defun my:ac-c-headers-init ()
@@ -30,6 +40,7 @@
 (require 'auto-complete)
 (require 'auto-complete-config)
 (ac-config-default)
+(global-auto-complete-mode t)
 (setq ac-disable-faces nil) ; quotation 안에도 자동 완성되게 해줌. 헤더 자동완성할 때 필요.
 
 (with-eval-after-load 'auto-complete (ac-flyspell-workaround))
@@ -47,11 +58,14 @@
 (global-ede-mode 1)                      ; Enable the Project management system
 (global-semantic-idle-scheduler-mode t) ;The idle scheduler with automatically reparse buffers in idle time.
 (global-semantic-idle-completions-mode t) ;Display a tooltip with a list of possible completions near the cursor.
-(global-semantic-idle-summary-mode t)
-(global-set-key [(control return)] 'semantic-ia-complete-symbol-menu)
+(add-to-list 'semantic-default-submodes 'global-semantic-stickyfunc-mode t)
+(add-to-list 'semantic-default-submodes 'global-semantic-highlight-func-mode 1)(global-semantic-idle-summary-mode t)
+(global-set-key [(control tab)] 'semantic-ia-complete-symbol-menu)
+
 (defun my:add-semantic-to-autocomplete()
 	(add-to-list 'ac-sources 'ac-source-semantic)
 )
+:(add-hook 'c-mode-common-hook 'my:add-semantic-to-autocomplete)
 
 ;; 처음 부터 . -> :: 기능을 사용하시려면 아래 "nil" 을 "t" 바꾸세요. 
 (defvar semantic-complete-self-insert-p t)
@@ -92,11 +106,11 @@
   (define-key c++-mode-map ">" 'semantic-complete-self-insert-for-arrow-operator)
   (define-key c++-mode-map ":" 'semantic-complete-self-insert-for-scope-operator)
   )
-
 (add-hook 'c++-mode-hook 'c++-mode-additional-semantic-keys)
-(add-hook 'c-mode-common-hook 'my:add-semantic-to-autocomplete)
 
-;; iront-mode, company-irony 
+;; irony-mode, company-irony
+(add-hook 'after-init-hook 'global-company-mode)
+(company-quickhelp-mode)
 (add-hook 'c++-mode-hook 'irony-mode)
 (add-hook 'c-mode-hook 'irony-mode)
 (add-hook 'objc-mode-hook 'irony-mode)
@@ -110,6 +124,7 @@
           (lambda () (local-set-key (kbd "<C-tab>") 'company-complete)))
 (add-hook 'c-mode-common-hook
           (lambda () (local-set-key (kbd "C-c j") 'find-tag)))
+
 
 ;; 편의성 설정 ;;
 ;; copy & paste, undo redo 일반키(C-c, C-v, C-z, C-shift-z)사용
@@ -143,6 +158,13 @@
 (global-set-key (kbd "C-a") 'mark-whole-buffer) 
 (global-set-key (kbd "C-l") 'goto-line)
 
+; split window 키
+(global-set-key (kbd "<C-up>") 'shrink-window)
+(global-set-key (kbd "<C-down>") 'enlarge-window)
+(global-set-key (kbd "<C-left>") 'shrink-window-horizontally)
+(global-set-key (kbd "<C-right>") 'enlarge-window-horizontally)
+
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -150,10 +172,11 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
 	 (quote
-		(iedit irony-eldoc auto-complete-clang-async ac-clang auto-complete-clang yasnippet company-irony-c-headers company-irony auto-complete-chunk auto-complete-c-headers ac-c-headers))))
+		(company-anaconda company-quickhelp auto-virtualenv anaconda-mode virtualenvwrapper virtualenv wconf jedi-direx jedi company-jedi iedit irony-eldoc auto-complete-clang-async ac-clang auto-complete-clang yasnippet company-irony-c-headers company-irony auto-complete-chunk auto-complete-c-headers ac-c-headers))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
