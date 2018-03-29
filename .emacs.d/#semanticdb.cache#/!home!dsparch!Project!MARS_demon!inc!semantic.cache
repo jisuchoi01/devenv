@@ -1,0 +1,23 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("touch_event" type
+               (:members 
+                  ( ("x" variable (:type "short") (reparse-symbol classsubparts) [23 31])
+                    ("y" variable (:type "short") (reparse-symbol classsubparts) [33 41])
+                    ("is_on" variable (:type "short") (reparse-symbol classsubparts) [43 55]))                  
+                :type "struct")
+                nil [1 58]))          
+      :file "touch_event.h"
+      :pointmax 61
+      :fsize 60
+      :lastmodtime '(23178 24191 523706 801000)
+      :unmatched-syntax nil))
+  :file "!home!dsparch!Project!MARS_demon!inc!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

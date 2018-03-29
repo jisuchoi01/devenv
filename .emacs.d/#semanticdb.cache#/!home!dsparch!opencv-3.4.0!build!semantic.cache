@@ -1,0 +1,17 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags nil
+      :file "test.cpp"
+      :pointmax 1
+      :fsize 778
+      :lastmodtime '(23188 62831 611382 411000)
+      :unmatched-syntax nil))
+  :file "!home!dsparch!opencv-3.4.0!build!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

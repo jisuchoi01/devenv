@@ -4,56 +4,81 @@
   :tables
   (list
     (semanticdb-table "semanticdb-table"
-      :major-mode c-mode
+      :major-mode c++-mode
       :tags 
         '( ("iostream" include (:system-flag t) nil [1 20])
-            ("opencv2/opencv.hpp" include (:system-flag t) nil [21 50])
+            ("main" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [31 36]))                  
+                :type "int")
+                nil [22 75]))          
+      :file "test_arm2.cpp"
+      :pointmax 76
+      :fsize 75
+      :lastmodtime '(23170 37133 716329 18000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("opencv2/opencv.hpp" include nil nil [1 30])
+            ("iostream" include (:system-flag t) nil [33 52])
             ("cv" using (:type ("cv" type
                  (:prototype t
                   :type "namespace")
-                  nil nil)) nil [52 71])
-            ("Test" type
-               (:members 
-                  ( ("public" label nil (reparse-symbol classsubparts) [85 92])
-                    ("Test" function
-                       (:prototype-flag t
-                        :constructor-flag t
-                        :type ("Test" type (:type "class") nil nil))
-                        (reparse-symbol classsubparts) [97 104])
-                    ("Test" function
-                       (:prototype-flag t
-                        :destructor-flag t
-                        :typemodifiers ("virtual")
-                        :type "void")
-                        (reparse-symbol classsubparts) [109 125])
-                    ("public" label nil (reparse-symbol classsubparts) [127 134])
-                    ("TestClassPrint" function
-                       (:pure-virtual-flag t
-                        :prototype-flag t
-                        :type "void")
-                        (reparse-symbol classsubparts) [139 166])
-                    ("TestClassPrint2" function
-                       (:pure-virtual-flag t
-                        :prototype-flag t
-                        :type "void")
-                        (reparse-symbol classsubparts) [171 199]))                  
-                :type "class")
-                nil [72 202])
-            ("TestFunctionPrint" function (:type "void") nil [204 259])
+                  nil nil)) nil [58 77])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [80 100])
             ("main" function
                (:arguments 
-                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [270 279])
-                    ("argv" variable
-                       (:pointer 1
-                        :dereference 1
+                  ( ("" variable (:type "int") (reparse-symbol arg-sub-list) [121 125])
+                    ("" variable
+                       (:pointer 2
                         :type "char")
-                        (reparse-symbol arg-sub-list) [280 293]))                  
+                        (reparse-symbol arg-sub-list) [126 133]))                  
                 :type "int")
-                nil [261 467]))          
-      :file "test.c"
-      :pointmax 469
-      :fsize 468
-      :lastmodtime '(23163 51118 171555 865000)
+                nil [112 716]))          
+      :file "test_arm_opencv.cpp"
+      :pointmax 718
+      :fsize 845
+      :lastmodtime '(23170 36694 559397 804000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("opencv2/opencv.hpp" include nil nil [1 30])
+            ("iostream" include (:system-flag t) nil [33 52])
+            ("cv" using (:type ("cv" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [58 77])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [80 100])
+            ("main" function
+               (:arguments 
+                  ( ("" variable (:type "int") (reparse-symbol arg-sub-list) [115 119])
+                    ("" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [120 127]))                  
+                :type "int")
+                nil [106 585]))          
+      :file "test_opencv.cpp"
+      :pointmax 587
+      :fsize 390
+      :lastmodtime '(23170 46369 608449 699000)
+      :unmatched-syntax nil)
+
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags nil
+      :file "test.cpp"
+      :pointmax 1
+      :fsize 0
+      :lastmodtime '(23192 13478 274064 615000)
       :unmatched-syntax nil))
   :file "!home!dsparch!semantic.cache"
   :semantic-tag-version "2.0"

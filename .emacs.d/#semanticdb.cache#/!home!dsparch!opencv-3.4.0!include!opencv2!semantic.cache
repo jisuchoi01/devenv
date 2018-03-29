@@ -1,0 +1,23 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("OPENCV_ALL_HPP" variable (:constant-flag t) nil [2194 2208])
+            ("opencv2/opencv_modules.hpp" include nil nil [2363 2400])
+            ("opencv2/core.hpp" include nil nil [2553 2580]))          
+      :file "opencv.hpp"
+      :pointmax 4447
+      :fsize 4446
+      :lastmodtime '(23101 24845 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("OPENCV_ALL_HPP")
+          )
+))
+  :file "!home!dsparch!opencv-3.4.0!include!opencv2!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

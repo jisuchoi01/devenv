@@ -1,0 +1,157 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("linux/init.h" include (:system-flag t) nil [1 24])
+            ("linux/kernel.h" include (:system-flag t) nil [25 50])
+            ("linux/module.h" include (:system-flag t) nil [51 76])
+            ("linux/input.h" include (:system-flag t) nil [77 101])
+            ("linux/fs.h" include (:system-flag t) nil [102 123])
+            ("asm/uaccess.h" include (:system-flag t) nil [124 148])
+            ("linux/slab.h" include (:system-flag t) nil [149 172])
+            ("touch_event.h" include nil nil [174 198])
+            ("MAJOR_NUMBER" variable (:constant-flag t) nil [208 220])
+            ("mars_dev" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :type ("input_dev" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [255 289])
+            ("mars_open" function
+               (:arguments 
+                  ( ("inode" variable
+                       (:pointer 1
+                        :type ("inode" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [305 325])
+                    ("filp" variable
+                       (:pointer 1
+                        :type ("file" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [326 344]))                  
+                :type "int")
+                nil [291 410])
+            ("mars_release" function
+               (:arguments 
+                  ( ("inode" variable
+                       (:pointer 1
+                        :type ("inode" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [429 449])
+                    ("filp" variable
+                       (:pointer 1
+                        :type ("file" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [450 468]))                  
+                :type "int")
+                nil [412 547])
+            ("mars_write" function
+               (:arguments 
+                  ( ("filp" variable
+                       (:pointer 1
+                        :type ("file" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [568 586])
+                    ("buf" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [587 603])
+                    ("count" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [604 617])
+                    ("f_pos" variable
+                       (:pointer 1
+                        :type ("loff_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [618 632]))                  
+                :type ("ssize_t" type (:type "class") nil nil))
+                nil [549 1173])
+            ("mars_read" function
+               (:arguments 
+                  ( ("filp" variable
+                       (:pointer 1
+                        :type ("file" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1193 1211])
+                    ("buf" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1212 1222])
+                    ("count" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1223 1236])
+                    ("f_pos" variable
+                       (:pointer 1
+                        :type ("loff_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1237 1251]))                  
+                :type ("ssize_t" type (:type "class") nil nil))
+                nil [1175 1399])
+            ("vd_fops" variable
+               (:typemodifiers ("static")
+                :default-value "{
+	.read = mars_read,
+	.write = mars_write,
+	.open = mars_open,
+	.release = mars_release
+}"
+                :type ("file_operations" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [1401 1532])
+            ("mars_init" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1570 1575]))                  
+                :type ("__init" type (:type "class") nil nil))
+                nil [1553 2626])
+            ("mars_exit" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [2665 2670]))                  
+                :type ("__exit" type (:type "class") nil nil))
+                nil [2648 2824])
+            ("module_init" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("mars_init" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2838 2848]))                  
+                :type "int")
+                nil [2826 2849])
+            ("module_exit" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("mars_exit" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2862 2872]))                  
+                :type "int")
+                nil [2850 2873])
+            ("MODULE_LICENSE" function
+               (:prototype-flag t
+                :type "int")
+                nil [2874 2896]))          
+      :file "mars.c"
+      :pointmax 2897
+      :fsize 2896
+      :lastmodtime '(23192 10828 474134 621000)
+      :unmatched-syntax '((string 2889 . 2894) (VOID 2643 . 2647) (INT 1549 . 1552) (string 2889 . 2894) (VOID 2643 . 2647) (INT 1549 . 1552))
+      :lexical-table 
+        '(("MAJOR_NUMBER" . ((number "0" 221 . 222)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :file "touch_event.h"
+      :fsize 60
+      :lastmodtime '(23150 58675 384011 94000)))
+  :file "!home!dsparch!Project!mars_kmod!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

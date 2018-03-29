@@ -1,0 +1,58 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("stdlib.h" include (:system-flag t) nil [20 39])
+            ("opencv2/opencv.hpp" include (:system-flag t) nil [41 70])
+            ("DEBUG" variable (:constant-flag t) nil [80 85])
+            ("_touch_event" type
+               (:members 
+                  ( ("x" variable (:type "int") (reparse-symbol classsubparts) [110 116])
+                    ("y" variable (:type "int") (reparse-symbol classsubparts) [118 124])
+                    ("is_on" variable (:type "short") (reparse-symbol classsubparts) [126 138]))                  
+                :type "struct")
+                nil [87 141])
+            ("get_touch_event" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("frame" variable
+                       (:reference 1
+                        :type ("cv::Mat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [199 214])
+                    ("touch_event" variable
+                       (:pointer 1
+                        :type ("_touch_event" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [215 248]))                  
+                :type "int")
+                nil [143 249])
+            ("get_inner_angle" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("px1" variable (:type "float") (reparse-symbol arg-sub-list) [273 283])
+                    ("py1" variable (:type "float") (reparse-symbol arg-sub-list) [284 294])
+                    ("px2" variable (:type "float") (reparse-symbol arg-sub-list) [295 305])
+                    ("py2" variable (:type "float") (reparse-symbol arg-sub-list) [306 316])
+                    ("cx1" variable (:type "float") (reparse-symbol arg-sub-list) [317 327])
+                    ("cy1" variable (:type "float") (reparse-symbol arg-sub-list) [328 338]))                  
+                :type "float")
+                nil [251 339]))          
+      :file "touch_event.h"
+      :pointmax 341
+      :fsize 340
+      :lastmodtime '(23178 53154 968163 416000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("DEBUG")
+          )
+))
+  :file "!home!dsparch!Project!mars-touch!inc!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

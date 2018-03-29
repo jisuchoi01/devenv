@@ -6,6 +6,9 @@
 	     '("melpa" . "https://melpa.milkbox.net/packages/"))
 (package-initialize)
 
+;; 패키지 리스트 파일로 저장
+(setq custom-file "~/.emacs.d/custom.el")
+(load custom-file)
 
 ;; 자동 완성 ;;
 
