@@ -35,8 +35,29 @@
 	(dolist (package install-needed-packages)
 		(unless (package-installed-p package)
 			(if (y-or-n-p (format "Package %s is missing. Install it? " package))
-					(message "installed")
+					(setq package (format "%s"))
 				;	(package-install package)
+					(message "%s package installed")
+				)
+			)
+		)
+	
+	;activate installed packages
+  (package-initialize)
+	)
+
+(defun install-selected-packages() (interactive)
+	; fetch the list of packages available
+	(unless package-archive-contents
+		(package-refresh-contents))
+
+	; install the missing packages
+	(dolist (package package-selected-packages)
+		(unless (package-installed-p package)
+			(if (y-or-n-p (format "Package %s is missing. Install it? " package))
+					(setq package (format "%s"))
+				;	(package-install package)
+					(message "%s package installed")
 				)
 			)
 		)

@@ -6,17 +6,21 @@
 	     '("melpa" . "https://melpa.milkbox.net/packages/"))
 (package-initialize)
 
-;; 패키지 리스트 파일로 저장
+;;; 커스텀 모듈 로드 ;;;
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file)
 
-;; 자동 완성 ;;
 
-;; python 자동 완성
-(require 'auto-virtualenv)
-(add-hook 'python-mode-hook 'auto-virtualenv-set-virtualenv)
-(add-hook 'projectile-after-switch-project-hook 'auto-virtualenv-set-virtualenv)
-(add-hook 'python-mode-hook 'anaconda-eldoc-mode)
+;;; 자동 완성 ;;;
+
+;; python 자동 완성 기능 추가
+(if (package-installed-p 'auto-virtualenv)
+	(require 'auto-virtualenv)
+	(add-hook 'python-mode-hook 'auto-virtualenv-set-virtualenv)
+	(add-hook 'projectile-after-switch-project-hook 'auto-virtualenv-set-virtualenv)
+	(add-hook 'python-mode-hook 'anaconda-eldoc-mode)
+	)
+
 (autoload 'jedi:setup "jedi" nil t)
 (add-hook 'python-mode-hook 'jedi:setup)
 (setq jedi:complete-on-dot t)
