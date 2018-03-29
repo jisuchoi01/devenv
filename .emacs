@@ -1,9 +1,7 @@
 (require 'package)
 (setq package-enable-at-startup t)
-(add-to-list 'package-archives
-	     '("melpa" . "https://melpa.org/packages/"))
-(add-to-list 'package-archives
-	     '("melpa" . "https://melpa.milkbox.net/packages/"))
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+(add-to-list 'package-archives '("melpa" . "https://melpa.milkbox.net/packages/") t)
 (package-initialize)
 
 ;;; 커스텀 모듈 로드 ;;;
@@ -19,13 +17,13 @@
 	(add-hook 'python-mode-hook 'auto-virtualenv-set-virtualenv)
 	(add-hook 'projectile-after-switch-project-hook 'auto-virtualenv-set-virtualenv)
 	(add-hook 'python-mode-hook 'anaconda-eldoc-mode)
-	)
+  )
 
 (autoload 'jedi:setup "jedi" nil t)
 (add-hook 'python-mode-hook 'jedi:setup)
 (setq jedi:complete-on-dot t)
 
-;; auto-complete c/c++ 헤더 자동 완성 포함 내용
+;;auto-complete c/c++ 헤더 자동 완성 포함 내용
 (defun my:ac-c-headers-init ()
   (require 'auto-complete-c-headers)
   (add-to-list 'ac-sources 'ac-source-c-headers)
@@ -138,7 +136,7 @@
 
 
 ;;; 편의성 설정 ;;;
-;; copy & paste, undo redo 일반키(C-c, C-v, C-z, C-shift-z)사용
+;;copy & paste, undo redo 일반키(C-c, C-v, C-z, C-shift-z)사용
 (cua-mode t)
 
 ;; 대괄호 매칭 
@@ -176,7 +174,7 @@
 (global-set-key (kbd "<C-right>") 'enlarge-window-horizontally)
 
 
-;;; custom-set-variables ;;;x
+;;; custom-set-variables ;;;
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -191,4 +189,3 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
-

@@ -12,14 +12,19 @@
        (write-region packs nil filename nil)
 )
 
+
 (defun mydebug() (interactive)
 	(message "%s" package-selected-packages)
 	)
+
 
 (defun load-package-list-and-install() (interactive)
   "Prompt user to enter a file name, with completion and history support."
   (interactive)
   (setq filename (read-file-name "Enter file name:"))
+
+	 ;activate installed packages
+  (package-initialize)
 
 	; install package list
 	(setq install-needed-packages
@@ -28,40 +33,11 @@
 					(split-string (buffer-string) "\n" t)))
 
 	; fetch the list of packages available
-	(unless package-archive-contents
-		(package-refresh-contents))
+	(package-refresh-contents)
 
-	; install the missing packages
+	;install the missing packages
 	(dolist (package install-needed-packages)
 		(unless (package-installed-p package)
-			(if (y-or-n-p (format "Package %s is missing. Install it? " package))
-					(setq package (format "%s"))
-				;	(package-install package)
-					(message "%s package installed")
-				)
-			)
-		)
-	
-	;activate installed packages
-  (package-initialize)
-	)
-
-(defun install-selected-packages() (interactive)
-	; fetch the list of packages available
-	(unless package-archive-contents
-		(package-refresh-contents))
-
-	; install the missing packages
-	(dolist (package package-selected-packages)
-		(unless (package-installed-p package)
-			(if (y-or-n-p (format "Package %s is missing. Install it? " package))
-					(setq package (format "%s"))
-				;	(package-install package)
-					(message "%s package installed")
-				)
-			)
-		)
-	
-	;activate installed packages
-  (package-initialize)
-	)
+		  (if (y-or-n-p (format "Package %s is missing. Install it? " package))
+		      (package-install package))))
+ )
