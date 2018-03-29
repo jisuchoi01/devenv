@@ -45,12 +45,16 @@
 	)
 
 (require 'auto-complete)
-(require 'auto-complete-config)
-(ac-config-default)
-(global-auto-complete-mode t)
-(setq ac-disable-faces nil) ; quotation 안에도 자동 완성되게 해줌. 헤더 자동완성할 때 필요.
-
 (with-eval-after-load 'auto-complete (ac-flyspell-workaround))
+
+;; auto complet config
+(if (package-installed-p 'auto-complete-config)
+		(require 'auto-complete-config)
+	(ac-config-default)
+	(global-auto-complete-mode t)
+  (setq ac-disable-faces nil) ; quotation 안에도 자동 완성되게 해줌. 헤더 자동완성할 때 필요.
+	)
+
 (add-hook 'c++-mode-hook 'my:ac-c-headers-init)
 (add-hook 'c-mode-hook 'my:ac-c-headers-init)
 
@@ -133,7 +137,7 @@
           (lambda () (local-set-key (kbd "C-c j") 'find-tag)))
 
 
-;; 편의성 설정 ;;
+;;; 편의성 설정 ;;;
 ;; copy & paste, undo redo 일반키(C-c, C-v, C-z, C-shift-z)사용
 (cua-mode t)
 
@@ -153,10 +157,10 @@
 ;; c코딩 스타일 지정(글로벌)
 (setq c-default-style "bsd")
 
-; iedit 전부 바꾸기
+;; iedit :전부 바꾸기
 (define-key global-map (kbd "C-h C-k") `iedit-mode)
 
-;; 단축키 ;;
+;;; 단축키 ;;;
 (global-set-key [f5] 'compile)
 (global-set-key [f1] 'manual-entry)
 
@@ -172,6 +176,7 @@
 (global-set-key (kbd "<C-right>") 'enlarge-window-horizontally)
 
 
+;;; custom-set-variables ;;;x
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
