@@ -1,20 +1,20 @@
 (defun save-package-list-file () (interactive)
        (setq packs "")
-			 (dolist (pack package-activated-list)
+			 (dolist (pack package-selected-packages)
 				 (setq pack (format "%s" pack))
    			 (if (not(string= pack ""))
-						 (setq packs (concat packs "\n" pack))		
+						 (setq packs (concat packs pack "\n"))		
 					 )
 				 )
-       (write-region packs nil ".emacs-package-list" nil)
+
+			 (interactive)
+       (setq filename (read-file-name "Enter file name:"))
+       (write-region packs nil filename nil)
 )
 
-(defun read-lines (filePath)
-  "Return a list of lines of a file at filePath."
-  (with-temp-buffer
-    (insert-file-contents filePath)
-    (split-string (buffer-string) "\n" t)))
-
+(defun mydebug() (interactive)
+	(message "%s" package-selected-packages)
+	)
 
 (defun load-package-list-and-install() (interactive)
   "Prompt user to enter a file name, with completion and history support."
