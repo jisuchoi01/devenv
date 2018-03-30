@@ -8,7 +8,6 @@
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file)
 
-
 ;;; 자동 완성 ;;;
 
 ;; python 자동 완성 기능 추가
@@ -118,19 +117,21 @@
 (add-hook 'c++-mode-hook 'c++-mode-additional-semantic-keys)
 
 ;; irony-mode, company-irony
+(if (package-installed-p 'company-quickhelp)
+  (company-quickhelp-mode)
+	)
+
+(eval-after-load 'company '(add-to-list 'company-backends 'company-irony))
+(add-hook 'c-mode-common-hook (lambda () (local-set-key (kbd "<C-tab>") 'company-complete)))
+
 (add-hook 'after-init-hook 'global-company-mode)
-(company-quickhelp-mode)
 (add-hook 'c++-mode-hook 'irony-mode)
 (add-hook 'c-mode-hook 'irony-mode)
 (add-hook 'objc-mode-hook 'irony-mode)
 
 (add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options)
-(eval-after-load 'company
-  '(add-to-list 'company-backends 'company-irony))
 
 ;; (Conditional) C/C++ Keybinds
-(add-hook 'c-mode-common-hook
-          (lambda () (local-set-key (kbd "<C-tab>") 'company-complete)))
 (add-hook 'c-mode-common-hook
           (lambda () (local-set-key (kbd "C-c j") 'find-tag)))
 
@@ -172,6 +173,9 @@
 (global-set-key (kbd "<C-down>") 'enlarge-window)
 (global-set-key (kbd "<C-left>") 'shrink-window-horizontally)
 (global-set-key (kbd "<C-right>") 'enlarge-window-horizontally)
+
+;;; custom face set
+(load-theme 'cyberpunk)
 
 
 ;;; custom-set-variables ;;;

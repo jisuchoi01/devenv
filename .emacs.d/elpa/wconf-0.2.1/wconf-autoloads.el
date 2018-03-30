@@ -3,7 +3,7 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "wconf" "wconf.el" (23190 25060 856905 869000))
+;;;### (autoloads nil "wconf" "wconf.el" (23229 63732 314610 931000))
 ;;; Generated autoloads from wconf.el
 
 (autoload 'wconf-load "wconf" "\
