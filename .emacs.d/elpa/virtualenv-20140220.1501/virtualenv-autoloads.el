@@ -3,8 +3,8 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "virtualenv" "virtualenv.el" (23192 8962 196939
-;;;;;;  979000))
+;;;### (autoloads nil "virtualenv" "virtualenv.el" (23229 63731 78617
+;;;;;;  926000))
 ;;; Generated autoloads from virtualenv.el
 
 (autoload 'virtualenv-workon "virtualenv" "\

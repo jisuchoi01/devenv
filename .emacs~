@@ -1,30 +1,28 @@
 (require 'package)
 (setq package-enable-at-startup t)
-(add-to-list 'package-archives
-	     '("melpa" . "https://melpa.org/packages/"))
-(add-to-list 'package-archives
-	     '("melpa" . "https://melpa.milkbox.net/packages/"))
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+(add-to-list 'package-archives '("melpa" . "https://melpa.milkbox.net/packages/") t)
 (package-initialize)
 
+;;; 커스텀 모듈 로드 ;;;
+(setq custom-file "~/.emacs.d/custom.el")
+(load custom-file)
 
-;; 자동 완성 ;;
+;;; 자동 완성 ;;;
 
-;; python 자동 완성
-(require 'auto-virtualenv)
-(add-hook 'python-mode-hook 'auto-virtualenv-set-virtualenv)
-(add-hook 'projectile-after-switch-project-hook 'auto-virtualenv-set-virtualenv)
+;; python 자동 완성 기능 추가
+(if (package-installed-p 'auto-virtualenv)
+	(require 'auto-virtualenv)
+	(add-hook 'python-mode-hook 'auto-virtualenv-set-virtualenv)
+	(add-hook 'projectile-after-switch-project-hook 'auto-virtualenv-set-virtualenv)
+	(add-hook 'python-mode-hook 'anaconda-eldoc-mode)
+  )
 
-(add-hook 'python-mode-hook 'anaconda-eldoc-mode)
+(autoload 'jedi:setup "jedi" nil t)
 (add-hook 'python-mode-hook 'jedi:setup)
-(setq jedi:setup-keys t)                      ; optional
-(setq jedi:complete-on-dot t)                 ; optional
+(setq jedi:complete-on-dot t)
 
-(defun my/python-mode-hook ()
-  (add-to-list 'company-backends 'company-jedi))
-
-(add-hook 'python-mode-hook 'my/python-mode-hook)
-
-;; auto-complete c/c++ 헤더 자동 완성 포함 내용
+;;auto-complete c/c++ 헤더 자동 완성 포함 내용
 (defun my:ac-c-headers-init ()
   (require 'auto-complete-c-headers)
   (add-to-list 'ac-sources 'ac-source-c-headers)
@@ -44,12 +42,16 @@
 	)
 
 (require 'auto-complete)
-(require 'auto-complete-config)
-(ac-config-default)
-(global-auto-complete-mode t)
-(setq ac-disable-faces nil) ; quotation 안에도 자동 완성되게 해줌. 헤더 자동완성할 때 필요.
-
 (with-eval-after-load 'auto-complete (ac-flyspell-workaround))
+
+;; auto complet config
+(if (package-installed-p 'auto-complete-config)
+		(require 'auto-complete-config)
+	(ac-config-default)
+	(global-auto-complete-mode t)
+  (setq ac-disable-faces nil) ; quotation 안에도 자동 완성되게 해줌. 헤더 자동완성할 때 필요.
+	)
+
 (add-hook 'c++-mode-hook 'my:ac-c-headers-init)
 (add-hook 'c-mode-hook 'my:ac-c-headers-init)
 
@@ -115,25 +117,27 @@
 (add-hook 'c++-mode-hook 'c++-mode-additional-semantic-keys)
 
 ;; irony-mode, company-irony
+(if (package-installed-p 'company-quickhelp)
+  (company-quickhelp-mode)
+	)
+
+(eval-after-load 'company '(add-to-list 'company-backends 'company-irony))
+(add-hook 'c-mode-common-hook (lambda () (local-set-key (kbd "<C-tab>") 'company-complete)))
+
 (add-hook 'after-init-hook 'global-company-mode)
-(company-quickhelp-mode)
 (add-hook 'c++-mode-hook 'irony-mode)
 (add-hook 'c-mode-hook 'irony-mode)
 (add-hook 'objc-mode-hook 'irony-mode)
 
 (add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options)
-(eval-after-load 'company
-  '(add-to-list 'company-backends 'company-irony))
 
 ;; (Conditional) C/C++ Keybinds
-(add-hook 'c-mode-common-hook
-          (lambda () (local-set-key (kbd "<C-tab>") 'company-complete)))
 (add-hook 'c-mode-common-hook
           (lambda () (local-set-key (kbd "C-c j") 'find-tag)))
 
 
-;; 편의성 설정 ;;
-;; copy & paste, undo redo 일반키(C-c, C-v, C-z, C-shift-z)사용
+;;; 편의성 설정 ;;;
+;;copy & paste, undo redo 일반키(C-c, C-v, C-z, C-shift-z)사용
 (cua-mode t)
 
 ;; 대괄호 매칭 
@@ -152,10 +156,10 @@
 ;; c코딩 스타일 지정(글로벌)
 (setq c-default-style "bsd")
 
-; iedit 전부 바꾸기
+;; iedit :전부 바꾸기
 (define-key global-map (kbd "C-h C-k") `iedit-mode)
 
-;; 단축키 ;;
+;;; 단축키 ;;;
 (global-set-key [f5] 'compile)
 (global-set-key [f1] 'manual-entry)
 
@@ -171,6 +175,7 @@
 (global-set-key (kbd "<C-right>") 'enlarge-window-horizontally)
 
 
+;;; custom-set-variables ;;;
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -178,11 +183,10 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
 	 (quote
-		(company-quickhelp auto-virtualenv anaconda-mode virtualenvwrapper virtualenv wconf jedi-direx jedi company-jedi iedit irony-eldoc auto-complete-clang-async ac-clang auto-complete-clang yasnippet company-irony-c-headers company-irony auto-complete-chunk auto-complete-c-headers ac-c-headers))))
+		(company-anaconda company-quickhelp auto-virtualenv anaconda-mode virtualenvwrapper virtualenv wconf jedi-direx jedi company-jedi iedit irony-eldoc auto-complete-clang-async ac-clang auto-complete-clang yasnippet company-irony-c-headers company-irony auto-complete-chunk auto-complete-c-headers ac-c-headers))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
-
