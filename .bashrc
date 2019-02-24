@@ -141,6 +141,10 @@ if ! shopt -oq posix; then
   fi
 fi
 
+export GTK_IM_MODULE=ibus
+export XMODIFIERS=@im=ibus
+export QR_IM_MODULE=ibus
+
 export XAUTHORITY=~/.Xauthority
 export ARCH=arm
 
