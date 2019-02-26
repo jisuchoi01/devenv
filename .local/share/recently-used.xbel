@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xbel version="1.0"
+      xmlns:bookmark="http://www.freedesktop.org/standards/desktop-bookmarks"
+      xmlns:mime="http://www.freedesktop.org/standards/shared-mime-info"
+>
+  <bookmark href="file:///home/dsparch/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C/google-chrome-stable_current_amd64.deb" added="2019-02-22T14:45:19Z" modified="2019-02-22T14:45:26Z" visited="2019-02-22T14:45:19Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/vnd.debian.binary-package"/>
+        <bookmark:applications>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2019-02-22T14:45:26Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/dsparch/Downloads/test" added="2019-02-24T18:53:16Z" modified="2019-02-24T18:53:16Z" visited="2019-02-24T18:53:16Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/octet-stream"/>
+        <bookmark:applications>
+          <bookmark:application name="emacs" exec="&apos;emacs %u&apos;" modified="2019-02-24T18:53:16Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/dsparch/Downloads/image.png" added="2019-02-25T17:39:54Z" modified="2019-02-25T17:40:09Z" visited="2019-02-25T17:39:54Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:applications>
+          <bookmark:application name="chromium" exec="&apos;chromium %u&apos;" modified="2019-02-25T17:40:09Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/dsparch/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C/android-studio-ide-182.5264788-linux.zip" added="2019-02-26T14:16:49Z" modified="2019-02-26T14:16:49Z" visited="2019-02-26T14:16:49Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/zip"/>
+        <bookmark:applications>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2019-02-26T14:16:49Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/dsparch/sound_check.png" added="2019-02-26T20:15:37Z" modified="2019-02-26T20:15:37Z" visited="2019-02-26T20:15:38Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:applications>
+          <bookmark:application name="chromium" exec="&apos;chromium %u&apos;" modified="2019-02-26T20:15:37Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/dsparch/.emacs" added="2019-02-26T20:28:52Z" modified="2019-02-26T20:28:52Z" visited="2019-02-26T20:28:52.854793Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/octet-stream"/>
+        <bookmark:applications>
+          <bookmark:application name="emacs" exec="&apos;emacs %u&apos;" modified="2019-02-26T20:28:52Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+</xbel>

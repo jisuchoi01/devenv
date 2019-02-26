@@ -1,0 +1,9 @@
+2019/02/26-22:11:17.232 af9 Reusing MANIFEST /home/dsparch/.config/chromium/Default/Session Storage/MANIFEST-000001
+2019/02/26-22:11:17.232 af9 Recovering log #179
+2019/02/26-22:11:17.232 af9 Reusing old log /home/dsparch/.config/chromium/Default/Session Storage/000179.log 
+2019/02/26-22:34:43.789 1e49 Level-0 table #184: started
+2019/02/26-22:34:43.797 1e49 Level-0 table #184: 20387 bytes OK
+2019/02/26-22:34:43.800 1e49 Delete type=0 #179
+2019/02/26-23:04:12.145 1e49 Level-0 table #186: started
+2019/02/26-23:04:12.153 1e49 Level-0 table #186: 24470 bytes OK
+2019/02/26-23:04:12.156 1e49 Delete type=0 #183
