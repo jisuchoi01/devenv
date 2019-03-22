@@ -27,7 +27,16 @@
 ; Time Display
 (display-time)
 
+;; Basic mode ;;
+(cua-mode t)
+(blink-cursor-mode t)
+(add-to-list 'auto-mode-alist '("\\.c\\'" . c-mode))
+(add-to-list 'auto-mode-alist '("\\.cpp\\'" . c++-mode))
+(add-to-list 'auto-mode-alist '("\\.el\\'" . lisp-mode))
+(add-to-list 'auto-mode-alist '("\\.py\\'" . python-mode))
+
 ;; Basic Shortcut Keys ;;
+
 (global-set-key [f12] 'describe-key)
 (global-set-key [f10] 'describe-function)
 (global-set-key [f1] 'shell)
@@ -63,18 +72,33 @@
 (global-set-key (kbd "C-c C-i")    'windmove-up)
 (global-set-key (kbd "C-c C-k")  'windmove-down)
 
-;; Basic mode ;;
-(cua-mode t)
-(blink-cursor-mode t)
+(global-set-key (kbd "C-c C-k")  'goto-line)
+(global-set-key (kbd "TAB") 'self-insert-command)
 
-; add language mode
-(add-to-list 'auto-mode-alist '("\\.c\\'" . c-mode))
-(add-to-list 'auto-mode-alist '("\\.cpp\\'" . c++-mode))
-(add-to-list 'auto-mode-alist '("\\.py\\'" . python-mode))
+;; Mode keymap setting
+(add-hook 'python-mode-hook
+          (lambda()
+            (local-unset-key (kbd "C-c C-j"))))
 
-;; Package
+(add-hook 'python-mode-hook
+          (lambda()
+            (local-unset-key (kbd "C-c C-l"))))
+
+;; PACKAGE
 (require 'package)
 (setq package-enable-at-startup t)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
-(add-to-list 'package-archives '("melpa" . "https://melpa.milkbox.net/packages/") t)
+(add-to-list 'package-archives '("melpa" . "https://melpa.kmilkbox.net/packages/") t)
 (package-initialize)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages '(company-anaconda)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
