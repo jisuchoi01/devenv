@@ -43,10 +43,10 @@ if ($?prompt) then
 
 endif
 
+setenv LANG ko_KR.UTF-8
 setenv XIM ibus
 setenv GTK_IM_MODULE ibus
 setenv QT_IM_MODULE xim
 setenv XMODIFIERS @im=ibus
 setenv XIM_PROGRAM ibus-daemon
 setenv XIM_ARGS "-r --daemonize --xim"
-

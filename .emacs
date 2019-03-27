@@ -104,6 +104,9 @@
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 (add-to-list 'package-archives '("melpa" . "https://melpa.kmilkbox.net/packages/") t)
 (package-initialize)
+
+
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -118,7 +121,6 @@
  ;; If there is more than one, they won't work right.
  )
 
-
 ;;; Package Dependency mode
 ; (add-to-list 'auto-mode-alist '("\\.py\\'" . anaconda-mode))
 
@@ -128,3 +130,5 @@
 		(setq ac-disable-faces nil) ; auto-complete enable in
 		)
 
+=======
+>>>>>>> 2368e04e5814b61713a809ee5dce01ac8c5d5498
