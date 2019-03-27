@@ -35,6 +35,14 @@
 (add-to-list 'auto-mode-alist '("\\.el\\'" . lisp-mode))
 (add-to-list 'auto-mode-alist '("\\.py\\'" . python-mode))
 
+(semantic-mode t)
+(global-semantic-idle-scheduler-mode t) ;The idle scheduler with automatically reparse buffers in idle time.
+(global-semantic-idle-completions-mode t) ;Display a tooltip with a list of possible completions near the cursor.
+(global-semantic-idle-summary-mode t)
+(add-to-list 'semantic-default-submodes 'global-semantic-stickyfunc-mode t)
+(add-to-list 'semantic-default-submodes 'global-semantic-highlight-func-mode t)
+
+
 ;; Basic Shortcut Keys ;;
 
 (global-set-key [f12] 'describe-key)
@@ -56,7 +64,7 @@
 
 ; buffer arrow key
 (global-set-key (kbd "C-x C-j") 'previous-buffer)
-(global-set-key (kbd "C-i") 'beginning-of-visual-line)
+(global-set-key (kbd "C-x C-l") 'next-buffer)
 
 ; window key
 (global-set-key (kbd "M-9") 'split-window-vertically)
@@ -84,6 +92,12 @@
           (lambda()
             (local-unset-key (kbd "C-c C-l"))))
 
+; input method : set default input method as hangul
+(set-input-method "korean-hangul")
+
+; load theme
+(load-theme 'wombat)
+
 ;; PACKAGE
 (require 'package)
 (setq package-enable-at-startup t)
@@ -95,10 +109,22 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages '(company-anaconda)))
+ '(package-selected-packages
+   '(auto-complete auto-complete-c-headers auto-complete-chunk jedi company-anaconda)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+
+;;; Package Dependency mode
+; (add-to-list 'auto-mode-alist '("\\.py\\'" . anaconda-mode))
+
+;; Auto complete
+(if (package-installed-p 'auto-complete)
+		(global-auto-complete-mode t)
+		(setq ac-disable-faces nil) ; auto-complete enable in
+		)
+
