@@ -36,8 +36,9 @@
 (add-to-list 'auto-mode-alist '("\\.py\\'" . python-mode))
 
 (semantic-mode t)
-(global-semantic-idle-scheduler-mode t) ;The idle scheduler with automatically reparse buffers in idle time.
-(global-semantic-idle-completions-mode t) ;Display a tooltip with a list of possible completions near the cursor.
+;The idle scheduler with automatically reparse buffers in idle time.
+(global-semantic-idle-scheduler-mode t)
+(global-semantic-idle-completions-mode t) 
 (global-semantic-idle-summary-mode t)
 (add-to-list 'semantic-default-submodes 'global-semantic-stickyfunc-mode t)
 (add-to-list 'semantic-default-submodes 'global-semantic-highlight-func-mode t)
@@ -49,9 +50,10 @@
 (global-set-key [f10] 'describe-function)
 (global-set-key [f1] 'shell)
 
-(global-set-key (kbd "C-s") 'save-buffer)
+(global-set-key (kbd "C-s") 'save-buffer)				 
 
 ; find word
+(define-key isearch-mode-map [(control f)] 'isearch-repeat-forward)
 (global-set-key (kbd "C-f") 'isearch-forward)
 (define-key isearch-mode-map (kbd "C-f") 'isearch-repeat-forward)
 (define-key isearch-mode-map (kbd "C-d") 'isearch-repeat-backward)
@@ -84,18 +86,23 @@
 (global-set-key (kbd "TAB") 'self-insert-command)
 
 ;; Mode keymap setting
-(add-hook 'python-mode-hook
-          (lambda()
-            (local-unset-key (kbd "C-c C-j"))))
 
+; unbind mark set key
+(global-unset-key (kbd "C-SPC"))
+(global-unset-key (kbd "C-@"))
+
+; unbind python shell send to file key
 (add-hook 'python-mode-hook
           (lambda()
-            (local-unset-key (kbd "C-c C-l"))))
+            (local-unset-key (kbd "C-c C-j"))
+			(local-unset-key (kbd "C-c C-l"))
+			))
+
 
 ; input method : set default input method as hangul
 (set-input-method "korean-hangul")
 
-; load theme
+; load themek
 (load-theme 'wombat)
 
 ;; PACKAGE
@@ -105,15 +112,13 @@
 (add-to-list 'package-archives '("melpa" . "https://melpa.kmilkbox.net/packages/") t)
 (package-initialize)
 
-
-
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(auto-complete auto-complete-c-headers auto-complete-chunk jedi company-anaconda)))
+   '(virtualenv auto-complete auto-complete-c-headers auto-complete-chunk jedi company-anaconda)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -121,14 +126,22 @@
  ;; If there is more than one, they won't work right.
  )
 
+
 ;;; Package Dependency mode
-; (add-to-list 'auto-mode-alist '("\\.py\\'" . anaconda-mode))
+;(add-to-list 'auto-mode-alist '("\\.py\\'" . anaconda-mode))
 
 ;; Auto complete
 (if (package-installed-p 'auto-complete)
-		(global-auto-complete-mode t)
-		(setq ac-disable-faces nil) ; auto-complete enable in
-		)
+	(progn
+	  (require 'auto-complete)
+	)
+  )
 
-=======
->>>>>>> 2368e04e5814b61713a809ee5dce01ac8c5d5498
+(with-eval-after-load 'auto-complete
+  (ac-config-default)
+  (global-auto-complete-mode t)
+  (setq ac-use-menu-map t)				;
+  (setq ac-quick-help-delay 0.8)
+  (define-key ac-menu-map (kbd "M-i") 'ac-previous)
+  (define-key ac-menu-map (kbd "M-k") 'ac-next)
+)
