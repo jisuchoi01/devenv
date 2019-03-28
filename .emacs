@@ -144,4 +144,6 @@
   (setq ac-quick-help-delay 0.8)
   (define-key ac-menu-map (kbd "M-i") 'ac-previous)
   (define-key ac-menu-map (kbd "M-k") 'ac-next)
+  ; candiate menu popup
+  (define-key ac-mode-map (kbd "C-SPC") 'auto-complete)
 )
