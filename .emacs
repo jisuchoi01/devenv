@@ -141,9 +141,20 @@
   (ac-config-default)
   (global-auto-complete-mode t)
   (setq ac-use-menu-map t)				;
-  (setq ac-quick-help-delay 0.8)
+  (setq ac-quick-help-delay 0.5)
   (define-key ac-menu-map (kbd "M-i") 'ac-previous)
   (define-key ac-menu-map (kbd "M-k") 'ac-next)
   ; candiate menu popup
   (define-key ac-mode-map (kbd "C-SPC") 'auto-complete)
+  (define-key ac-completing-map (kbd "C-SPC") 'ac-quick-help)
 )
+
+;;; Custom File.
+;; Load Custome : Below is example
+;(add-to-list 'load-path "~/.emacs.d/custom")
+
+
+;; Jedi Mode
+(add-hook 'python-mode-hook 'jedi:setup)
+(add-hook 'anaconda-mode-hook 'jedi:setup)
+(setq jedi:complete-on-dot t)
