@@ -5,6 +5,7 @@
 
 ; Line Number
 (global-linum-mode t)
+(setq linum-format "%4d \u2502    ")
 
 ; Save last cursor position
 (if (version< emacs-version "25.0")
