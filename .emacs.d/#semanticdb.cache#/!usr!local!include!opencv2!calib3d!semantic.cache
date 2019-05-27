@@ -1,0 +1,1260 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("OPENCV_CALIB3D_C_H" variable (:constant-flag t) nil [2255 2273])
+            ("opencv2/core/core_c.h" include nil nil [2275 2307])
+            ("cvReprojectImageTo3D" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("disparityImage" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CvArr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [18710 18738])
+                    ("_3dImage" variable
+                       (:pointer 1
+                        :type ("CvArr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [18774 18790])
+                    ("Q" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [18791 18806])
+                    ("handleMissingValues" variable (:type "int") (reparse-symbol arg-sub-list) [18842 18876])
+                    ("" variable (:type ("CV_DEFAULT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [18866 18879]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [18688 18882])
+            ("cvValidateDisparity" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("disparity" variable
+                       (:pointer 1
+                        :type ("CvArr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [18400 18417])
+                    ("cost" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CvArr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [18418 18436])
+                    ("minDisparity" variable (:type "int") (reparse-symbol arg-sub-list) [18470 18487])
+                    ("numberOfDisparities" variable (:type "int") (reparse-symbol arg-sub-list) [18488 18512])
+                    ("disp12MaxDiff" variable (:type "int") (reparse-symbol arg-sub-list) [18546 18574])
+                    ("" variable (:type ("CV_DEFAULT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [18564 18577]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [18379 18580])
+            ("cvGetValidDisparityROI" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("roi1" variable (:type ("CvRect" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [18238 18250])
+                    ("roi2" variable (:type ("CvRect" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [18251 18263])
+                    ("minDisparity" variable (:type "int") (reparse-symbol arg-sub-list) [18264 18281])
+                    ("numberOfDisparities" variable (:type "int") (reparse-symbol arg-sub-list) [18320 18344])
+                    ("SADWindowSize" variable (:type "int") (reparse-symbol arg-sub-list) [18345 18364]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [18214 18365])
+            ("cvFindStereoCorrespondenceBM" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("left" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CvArr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [18074 18092])
+                    ("right" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CvArr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [18093 18112])
+                    ("disparity" variable
+                       (:pointer 1
+                        :type ("CvArr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [18155 18172])
+                    ("state" variable
+                       (:pointer 1
+                        :type ("CvStereoBMState" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [18173 18197]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [18044 18198])
+            ("cvReleaseStereoBMState" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("state" variable
+                       (:pointer 2
+                        :type ("CvStereoBMState" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [18004 18029]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [17980 18030])
+            ("cvCreateStereoBMState" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("preset" variable (:type "int") (reparse-symbol arg-sub-list) [17838 17859])
+                    ("" variable (:type ("CV_DEFAULT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [17849 17879])
+                    ("numberOfDisparities" variable (:type "int") (reparse-symbol arg-sub-list) [17927 17961])
+                    ("" variable (:type ("CV_DEFAULT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [17951 17964]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [17816 17966])
+            ("CV_STEREO_BM_NARROW" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [17769 17788])
+            ("CV_STEREO_BM_FISH_EYE" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [17737 17758])
+            ("CV_STEREO_BM_BASIC" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [17708 17726])
+            ("CvStereoBMState" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :typedef ("CvStereoBMState" type (:type "struct") nil nil))
+                (reparse-symbol extern-c-contents) [16308 17698])
+            ("CvStereoBMState" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "struct"
+                :members 
+                  ( ("preFilterType" variable (:type "int") (reparse-symbol classsubparts) [16398 16416])
+                    ("preFilterSize" variable (:type "int") (reparse-symbol classsubparts) [16462 16480])
+                    ("preFilterCap" variable (:type "int") (reparse-symbol classsubparts) [16523 16540])
+                    ("SADWindowSize" variable (:type "int") (reparse-symbol classsubparts) [16681 16699])
+                    ("minDisparity" variable (:type "int") (reparse-symbol classsubparts) [16719 16736])
+                    ("numberOfDisparities" variable (:type "int") (reparse-symbol classsubparts) [16781 16805])
+                    ("textureThreshold" variable (:type "int") (reparse-symbol classsubparts) [16880 16901])
+                    ("uniquenessRatio" variable (:type "int") (reparse-symbol classsubparts) [17016 17036])
+                    ("speckleWindowSize" variable (:type "int") (reparse-symbol classsubparts) [17237 17259])
+                    ("speckleRange" variable (:type "int") (reparse-symbol classsubparts) [17294 17311])
+                    ("trySmallerWindows" variable (:type "int") (reparse-symbol classsubparts) [17360 17382])
+                    ("roi1" variable (:type ("CvRect" type (:type "class") nil nil)) (reparse-symbol classsubparts) [17496 17514])
+                    ("roi2" variable (:type ("CvRect" type (:type "class") nil nil)) (reparse-symbol classsubparts) [17496 17514])
+                    ("disp12MaxDiff" variable (:type "int") (reparse-symbol classsubparts) [17519 17537])
+                    ("preFilteredImg0" variable
+                       (:pointer 1
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [17568 17591])
+                    ("preFilteredImg1" variable
+                       (:pointer 1
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [17596 17619])
+                    ("slidingSumBuf" variable
+                       (:pointer 1
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [17624 17645])
+                    ("cost" variable
+                       (:pointer 1
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [17650 17662])
+                    ("disp" variable
+                       (:pointer 1
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [17667 17679]))                  )
+                (reparse-symbol extern-c-contents) [16308 17698])
+            ("CV_STEREO_BM_XSOBEL" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [16230 16249])
+            ("CV_STEREO_BM_NORMALIZED_RESPONSE" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [16186 16218])
+            ("cvStereoRectifyUncalibrated" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("points1" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15869 15890])
+                    ("points2" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15891 15912])
+                    ("F" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15953 15968])
+                    ("img_size" variable (:type ("CvSize" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15969 15985])
+                    ("H1" variable
+                       (:pointer 1
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [16026 16036])
+                    ("H2" variable
+                       (:pointer 1
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [16037 16047])
+                    ("threshold" variable (:type "double") (reparse-symbol arg-sub-list) [16088 16115])
+                    ("" variable (:type ("CV_DEFAULT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16105 16118]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [15840 16120])
+            ("cvStereoRectify" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("camera_matrix1" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15019 15047])
+                    ("camera_matrix2" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15048 15076])
+                    ("dist_coeffs1" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15106 15132])
+                    ("dist_coeffs2" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15133 15159])
+                    ("image_size" variable (:type ("CvSize" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15189 15207])
+                    ("R" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15208 15223])
+                    ("T" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15224 15239])
+                    ("R1" variable
+                       (:pointer 1
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15269 15279])
+                    ("R2" variable
+                       (:pointer 1
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15280 15290])
+                    ("P1" variable
+                       (:pointer 1
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15291 15301])
+                    ("P2" variable
+                       (:pointer 1
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15302 15312])
+                    ("Q" variable
+                       (:pointer 1
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15342 15361])
+                    ("" variable (:type ("CV_DEFAULT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15351 15364])
+                    ("flags" variable (:type "int") (reparse-symbol arg-sub-list) [15395 15415])
+                    ("" variable (:type ("CV_DEFAULT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15405 15440])
+                    ("alpha" variable (:type "double") (reparse-symbol arg-sub-list) [15471 15494])
+                    ("" variable (:type ("CV_DEFAULT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15484 15498])
+                    ("new_image_size" variable (:type ("CvSize" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15529 15561])
+                    ("" variable (:type ("CV_DEFAULT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15551 15574])
+                    ("valid_pix_ROI1" variable
+                       (:pointer 1
+                        :type ("CvRect" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15605 15638])
+                    ("" variable (:type ("CV_DEFAULT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15628 15641])
+                    ("valid_pix_ROI2" variable
+                       (:pointer 1
+                        :type ("CvRect" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15672 15705])
+                    ("" variable (:type ("CV_DEFAULT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15695 15708]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [15002 15710])
+            ("CV_CALIB_ZERO_DISPARITY" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [14789 14812])
+            ("cvStereoCalibrate" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("object_points" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14103 14130])
+                    ("image_points1" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14131 14158])
+                    ("image_points2" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14190 14217])
+                    ("npoints" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14218 14239])
+                    ("camera_matrix1" variable
+                       (:pointer 1
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14271 14293])
+                    ("dist_coeffs1" variable
+                       (:pointer 1
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14294 14314])
+                    ("camera_matrix2" variable
+                       (:pointer 1
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14346 14368])
+                    ("dist_coeffs2" variable
+                       (:pointer 1
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14369 14389])
+                    ("image_size" variable (:type ("CvSize" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14421 14439])
+                    ("R" variable
+                       (:pointer 1
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14440 14449])
+                    ("T" variable
+                       (:pointer 1
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14450 14459])
+                    ("E" variable
+                       (:pointer 1
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14491 14510])
+                    ("" variable (:type ("CV_DEFAULT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14500 14513])
+                    ("F" variable
+                       (:pointer 1
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14515 14534])
+                    ("" variable (:type ("CV_DEFAULT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14524 14537])
+                    ("flags" variable (:type "int") (reparse-symbol arg-sub-list) [14570 14590])
+                    ("" variable (:type ("CV_DEFAULT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14580 14614])
+                    ("term_crit" variable (:type ("CvTermCriteria" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14647 14682])
+                    ("" variable (:type ("CV_DEFAULT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14672 14776]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [14084 14779])
+            ("CV_CALIB_SAME_FOCAL_LENGTH" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [13850 13876])
+            ("CV_CALIB_FIX_INTRINSIC" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [13814 13836])
+            ("cvCalibrationMatrixValues" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("camera_matrix" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [13232 13259])
+                    ("image_size" variable (:type ("CvSize" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13292 13310])
+                    ("aperture_width" variable (:type "double") (reparse-symbol arg-sub-list) [13343 13375])
+                    ("" variable (:type ("CV_DEFAULT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13365 13378])
+                    ("aperture_height" variable (:type "double") (reparse-symbol arg-sub-list) [13412 13445])
+                    ("" variable (:type ("CV_DEFAULT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13435 13448])
+                    ("fovx" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [13482 13505])
+                    ("" variable (:type ("CV_DEFAULT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13495 13511])
+                    ("fovy" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [13545 13568])
+                    ("" variable (:type ("CV_DEFAULT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13558 13574])
+                    ("focal_length" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [13608 13639])
+                    ("" variable (:type ("CV_DEFAULT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13629 13645])
+                    ("principal_point" variable
+                       (:pointer 1
+                        :type ("CvPoint2D64f" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [13679 13719])
+                    ("" variable (:type ("CV_DEFAULT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13709 13725])
+                    ("pixel_aspect_ratio" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [13759 13796])
+                    ("" variable (:type ("CV_DEFAULT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13786 13802]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [13205 13804])
+            ("cvCalibrateCamera2" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("object_points" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12394 12421])
+                    ("image_points" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12454 12480])
+                    ("point_counts" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12513 12539])
+                    ("image_size" variable (:type ("CvSize" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12572 12590])
+                    ("camera_matrix" variable
+                       (:pointer 1
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12623 12644])
+                    ("distortion_coeffs" variable
+                       (:pointer 1
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12677 12702])
+                    ("rotation_vectors" variable
+                       (:pointer 1
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12735 12769])
+                    ("" variable (:type ("CV_DEFAULT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12759 12775])
+                    ("translation_vectors" variable
+                       (:pointer 1
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12809 12846])
+                    ("" variable (:type ("CV_DEFAULT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12836 12852])
+                    ("flags" variable (:type "int") (reparse-symbol arg-sub-list) [12886 12906])
+                    ("" variable (:type ("CV_DEFAULT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12896 12909])
+                    ("term_crit" variable (:type ("CvTermCriteria" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12943 12978])
+                    ("" variable (:type ("CV_DEFAULT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12968 13080]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [12374 13083])
+            ("CV_CALIB_NINTRINSIC" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [12233 12252])
+            ("CV_CALIB_FIX_TANGENT_DIST" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [12190 12215])
+            ("CV_CALIB_FIX_TAUX_TAUY" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [12151 12173])
+            ("CV_CALIB_TILTED_MODEL" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [12113 12134])
+            ("CV_CALIB_FIX_S1_S2_S3_S4" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [12073 12097])
+            ("CV_CALIB_THIN_PRISM_MODEL" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [12033 12058])
+            ("CV_CALIB_RATIONAL_MODEL" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [11995 12018])
+            ("CV_CALIB_FIX_K6" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [11965 11980])
+            ("CV_CALIB_FIX_K5" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [11935 11950])
+            ("CV_CALIB_FIX_K4" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [11905 11920])
+            ("CV_CALIB_FIX_K3" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [11876 11891])
+            ("CV_CALIB_FIX_K2" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [11848 11863])
+            ("CV_CALIB_FIX_K1" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [11820 11835])
+            ("CV_CALIB_FIX_FOCAL_LENGTH" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [11783 11808])
+            ("CV_CALIB_ZERO_TANGENT_DIST" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [11743 11769])
+            ("CV_CALIB_FIX_PRINCIPAL_POINT" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [11703 11731])
+            ("CV_CALIB_FIX_ASPECT_RATIO" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [11663 11688])
+            ("CV_CALIB_USE_INTRINSIC_GUESS" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [11623 11651])
+            ("cvDrawChessboardCorners" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("image" variable
+                       (:pointer 1
+                        :type ("CvArr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11446 11459])
+                    ("pattern_size" variable (:type ("CvSize" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11460 11480])
+                    ("corners" variable
+                       (:pointer 1
+                        :type ("CvPoint2D32f" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11518 11540])
+                    ("count" variable (:type "int") (reparse-symbol arg-sub-list) [11578 11588])
+                    ("pattern_was_found" variable (:type "int") (reparse-symbol arg-sub-list) [11589 11612]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [11421 11613])
+            ("cvFindChessboardCorners" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("image" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [11045 11063])
+                    ("pattern_size" variable (:type ("CvSize" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11064 11084])
+                    ("corners" variable
+                       (:pointer 1
+                        :type ("CvPoint2D32f" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11121 11143])
+                    ("corner_count" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [11180 11208])
+                    ("" variable (:type ("CV_DEFAULT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11198 11214])
+                    ("flags" variable (:type "int") (reparse-symbol arg-sub-list) [11252 11272])
+                    ("" variable (:type ("CV_DEFAULT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11262 11329]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [11020 11332])
+            ("cvCheckChessboard" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("src" variable
+                       (:pointer 1
+                        :type ("IplImage" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10917 10931])
+                    ("size" variable (:type ("CvSize" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10932 10944]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [10899 10945])
+            ("CV_CALIB_CB_FAST_CHECK" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [10493 10515])
+            ("CV_CALIB_CB_FILTER_QUADS" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [10454 10478])
+            ("CV_CALIB_CB_NORMALIZE_IMAGE" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [10415 10442])
+            ("CV_CALIB_CB_ADAPTIVE_THRESH" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [10376 10403])
+            ("cvInitIntrinsicParams2D" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("object_points" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10063 10090])
+                    ("image_points" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10128 10154])
+                    ("npoints" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10192 10213])
+                    ("image_size" variable (:type ("CvSize" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10214 10232])
+                    ("camera_matrix" variable
+                       (:pointer 1
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10270 10291])
+                    ("aspect_ratio" variable (:type "double") (reparse-symbol arg-sub-list) [10329 10359])
+                    ("" variable (:type ("CV_DEFAULT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10349 10363]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [10038 10366])
+            ("cvFindExtrinsicCameraParams2" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("object_points" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9441 9468])
+                    ("image_points" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9511 9537])
+                    ("camera_matrix" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9580 9607])
+                    ("distortion_coeffs" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9650 9681])
+                    ("rotation_vector" variable
+                       (:pointer 1
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9724 9747])
+                    ("translation_vector" variable
+                       (:pointer 1
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9790 9816])
+                    ("use_extrinsic_guess" variable (:type "int") (reparse-symbol arg-sub-list) [9859 9893])
+                    ("" variable (:type ("CV_DEFAULT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9883 9896]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [9411 9899])
+            ("cvProjectPoints2" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("object_points" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8744 8771])
+                    ("rotation_vector" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8772 8801])
+                    ("translation_vector" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8832 8864])
+                    ("camera_matrix" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8865 8892])
+                    ("distortion_coeffs" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8923 8954])
+                    ("image_points" variable
+                       (:pointer 1
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8955 8975])
+                    ("dpdrot" variable
+                       (:pointer 1
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9006 9030])
+                    ("" variable (:type ("CV_DEFAULT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9020 9036])
+                    ("dpdt" variable
+                       (:pointer 1
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9038 9060])
+                    ("" variable (:type ("CV_DEFAULT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9050 9066])
+                    ("dpdf" variable
+                       (:pointer 1
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9098 9120])
+                    ("" variable (:type ("CV_DEFAULT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9110 9126])
+                    ("dpdc" variable
+                       (:pointer 1
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9128 9150])
+                    ("" variable (:type ("CV_DEFAULT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9140 9156])
+                    ("dpddist" variable
+                       (:pointer 1
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9188 9213])
+                    ("" variable (:type ("CV_DEFAULT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9203 9219])
+                    ("aspect_ratio" variable (:type "double") (reparse-symbol arg-sub-list) [9251 9281])
+                    ("" variable (:type ("CV_DEFAULT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9271 9284]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [8726 9286])
+            ("cvComposeRT" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("_rvec1" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8103 8123])
+                    ("_tvec1" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8124 8144])
+                    ("_rvec2" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8170 8190])
+                    ("_tvec2" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8191 8211])
+                    ("_rvec3" variable
+                       (:pointer 1
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8237 8251])
+                    ("_tvec3" variable
+                       (:pointer 1
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8252 8266])
+                    ("dr3dr1" variable
+                       (:pointer 1
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8292 8316])
+                    ("" variable (:type ("CV_DEFAULT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8306 8319])
+                    ("dr3dt1" variable
+                       (:pointer 1
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8321 8345])
+                    ("" variable (:type ("CV_DEFAULT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8335 8348])
+                    ("dr3dr2" variable
+                       (:pointer 1
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8375 8399])
+                    ("" variable (:type ("CV_DEFAULT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8389 8402])
+                    ("dr3dt2" variable
+                       (:pointer 1
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8404 8428])
+                    ("" variable (:type ("CV_DEFAULT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8418 8431])
+                    ("dt3dr1" variable
+                       (:pointer 1
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8458 8482])
+                    ("" variable (:type ("CV_DEFAULT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8472 8485])
+                    ("dt3dt1" variable
+                       (:pointer 1
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8487 8511])
+                    ("" variable (:type ("CV_DEFAULT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8501 8514])
+                    ("dt3dr2" variable
+                       (:pointer 1
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8541 8565])
+                    ("" variable (:type ("CV_DEFAULT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8555 8568])
+                    ("dt3dt2" variable
+                       (:pointer 1
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8570 8594])
+                    ("" variable (:type ("CV_DEFAULT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8584 8597]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [8090 8600])
+            ("cvCalcMatMulDeriv" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("A" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7894 7909])
+                    ("B" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7910 7925])
+                    ("dABdA" variable
+                       (:pointer 1
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7926 7939])
+                    ("dABdB" variable
+                       (:pointer 1
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7940 7954]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [7875 7955])
+            ("cvDecomposeProjectionMatrix" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("projMatr" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7400 7422])
+                    ("calibMatr" variable
+                       (:pointer 1
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7423 7440])
+                    ("rotMatr" variable
+                       (:pointer 1
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7482 7497])
+                    ("posVect" variable
+                       (:pointer 1
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7498 7513])
+                    ("rotMatrX" variable
+                       (:pointer 1
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7555 7581])
+                    ("" variable (:type ("CV_DEFAULT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7571 7587])
+                    ("rotMatrY" variable
+                       (:pointer 1
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7630 7656])
+                    ("" variable (:type ("CV_DEFAULT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7646 7662])
+                    ("rotMatrZ" variable
+                       (:pointer 1
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7705 7731])
+                    ("" variable (:type ("CV_DEFAULT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7721 7737])
+                    ("eulerAngles" variable
+                       (:pointer 1
+                        :type ("CvPoint3D64f" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7780 7816])
+                    ("" variable (:type ("CV_DEFAULT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7806 7822]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [7371 7824])
+            ("cvRQDecomp3x3" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("matrixM" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7002 7023])
+                    ("matrixR" variable
+                       (:pointer 1
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7024 7039])
+                    ("matrixQ" variable
+                       (:pointer 1
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7040 7055])
+                    ("matrixQx" variable
+                       (:pointer 1
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7083 7109])
+                    ("" variable (:type ("CV_DEFAULT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7099 7115])
+                    ("matrixQy" variable
+                       (:pointer 1
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7144 7170])
+                    ("" variable (:type ("CV_DEFAULT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7160 7176])
+                    ("matrixQz" variable
+                       (:pointer 1
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7205 7231])
+                    ("" variable (:type ("CV_DEFAULT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7221 7237])
+                    ("eulerAngles" variable
+                       (:pointer 1
+                        :type ("CvPoint3D64f" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7266 7302])
+                    ("" variable (:type ("CV_DEFAULT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7292 7308]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [6987 7310])
+            ("cvFindHomography" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("src_points" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6487 6511])
+                    ("dst_points" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6541 6565])
+                    ("homography" variable
+                       (:pointer 1
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6595 6613])
+                    ("method" variable (:type "int") (reparse-symbol arg-sub-list) [6643 6664])
+                    ("" variable (:type ("CV_DEFAULT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6654 6667])
+                    ("ransacReprojThreshold" variable (:type "double") (reparse-symbol arg-sub-list) [6698 6737])
+                    ("" variable (:type ("CV_DEFAULT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6727 6740])
+                    ("mask" variable
+                       (:pointer 1
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6771 6793])
+                    ("" variable (:type ("CV_DEFAULT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6783 6796])
+                    ("maxIters" variable (:type "int") (reparse-symbol arg-sub-list) [6827 6850])
+                    ("" variable (:type ("CV_DEFAULT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6840 6856])
+                    ("confidence" variable (:type "double") (reparse-symbol arg-sub-list) [6887 6915])
+                    ("" variable (:type ("CV_DEFAULT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6905 6922]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [6469 6924])
+            ("cvRodrigues2" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("src" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6282 6299])
+                    ("dst" variable
+                       (:pointer 1
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6300 6311])
+                    ("jacobian" variable
+                       (:pointer 1
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6337 6363])
+                    ("" variable (:type ("CV_DEFAULT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6353 6366]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [6268 6369])
+            ("cvGetOptimalNewCameraMatrix" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("camera_matrix" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5705 5732])
+                    ("dist_coeffs" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5774 5799])
+                    ("image_size" variable (:type ("CvSize" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5841 5859])
+                    ("alpha" variable (:type "double") (reparse-symbol arg-sub-list) [5860 5873])
+                    ("new_camera_matrix" variable
+                       (:pointer 1
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5915 5940])
+                    ("new_imag_size" variable (:type ("CvSize" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5982 6013])
+                    ("" variable (:type ("CV_DEFAULT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6003 6026])
+                    ("valid_pixel_ROI" variable
+                       (:pointer 1
+                        :type ("CvRect" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6069 6103])
+                    ("" variable (:type ("CV_DEFAULT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6093 6106])
+                    ("center_principal_point" variable (:type "int") (reparse-symbol arg-sub-list) [6149 6186])
+                    ("" variable (:type ("CV_DEFAULT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6176 6189]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [5676 6191])
+            ("cvCorrectMatches" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("F" variable
+                       (:pointer 1
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5302 5311])
+                    ("points1" variable
+                       (:pointer 1
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5312 5327])
+                    ("points2" variable
+                       (:pointer 1
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5328 5343])
+                    ("new_points1" variable
+                       (:pointer 1
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5373 5392])
+                    ("new_points2" variable
+                       (:pointer 1
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5393 5412]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [5285 5413])
+            ("cvTriangulatePoints" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("projMatr1" variable
+                       (:pointer 1
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5114 5131])
+                    ("projMatr2" variable
+                       (:pointer 1
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5132 5149])
+                    ("projPoints1" variable
+                       (:pointer 1
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5182 5201])
+                    ("projPoints2" variable
+                       (:pointer 1
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5202 5221])
+                    ("points4D" variable
+                       (:pointer 1
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5254 5270]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [5094 5271])
+            ("cvComputeCorrespondEpilines" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("points" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4826 4846])
+                    ("which_image" variable (:type "int") (reparse-symbol arg-sub-list) [4888 4904])
+                    ("fundamental_matrix" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4946 4978])
+                    ("correspondent_lines" variable
+                       (:pointer 1
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5020 5048]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [4797 5049])
+            ("cvFindFundamentalMat" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("points1" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4324 4345])
+                    ("points2" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4346 4367])
+                    ("fundamental_matrix" variable
+                       (:pointer 1
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4401 4427])
+                    ("method" variable (:type "int") (reparse-symbol arg-sub-list) [4461 4482])
+                    ("" variable (:type ("CV_DEFAULT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4472 4496])
+                    ("param1" variable (:type "double") (reparse-symbol arg-sub-list) [4531 4555])
+                    ("" variable (:type ("CV_DEFAULT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4545 4559])
+                    ("param2" variable (:type "double") (reparse-symbol arg-sub-list) [4561 4585])
+                    ("" variable (:type ("CV_DEFAULT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4575 4591])
+                    ("status" variable
+                       (:pointer 1
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4626 4650])
+                    ("" variable (:type ("CV_DEFAULT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4640 4656]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [4302 4659])
+            ("" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "enum"
+                :members 
+                  ( ("CV_ITERATIVE" variable
+                       (:constant-flag t
+                        :default-value (3922 3923)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [3907 3923])
+                    ("CV_EPNP" variable
+                       (:constant-flag t
+                        :default-value (3939 3940)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [3929 3940])
+                    ("CV_P3P" variable
+                       (:constant-flag t
+                        :default-value (4056 4057)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [4047 4057])
+                    ("CV_DLS" variable
+                       (:constant-flag t
+                        :default-value (4193 4194)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [4184 4194]))                  )
+                (reparse-symbol extern-c-contents) [3896 4289])
+            ("CV_FM_RANSAC" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [3872 3884])
+            ("CV_FM_LMEDS" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [3843 3854])
+            ("CV_FM_RANSAC_ONLY" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [3807 3824])
+            ("CV_FM_LMEDS_ONLY" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [3772 3788])
+            ("CV_RANSAC" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [3751 3760])
+            ("CV_LMEDS" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [3732 3740])
+            ("CV_FM_8POINT" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [3708 3720])
+            ("CV_FM_7POINT" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [3685 3697])
+            ("cvConvertPointsHomogeneous" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("src" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3572 3589])
+                    ("dst" variable
+                       (:pointer 1
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3590 3602]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3544 3603])
+            ("cvRANSACUpdateNumIters" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("p" variable (:type "double") (reparse-symbol arg-sub-list) [3434 3443])
+                    ("err_prob" variable (:type "double") (reparse-symbol arg-sub-list) [3444 3460])
+                    ("model_points" variable (:type "int") (reparse-symbol arg-sub-list) [3496 3513])
+                    ("max_iters" variable (:type "int") (reparse-symbol arg-sub-list) [3514 3529]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3410 3530])
+            ("cvReleasePOSITObject" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("posit_object" variable
+                       (:pointer 2
+                        :type ("CvPOSITObject" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3319 3350]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3297 3351])
+            ("cvPOSIT" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("posit_object" variable
+                       (:pointer 1
+                        :type ("CvPOSITObject" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3043 3071])
+                    ("image_points" variable
+                       (:pointer 1
+                        :type ("CvPoint2D32f" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3072 3099])
+                    ("focal_length" variable (:type "double") (reparse-symbol arg-sub-list) [3123 3143])
+                    ("criteria" variable (:type ("CvTermCriteria" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3144 3168])
+                    ("rotation_matrix" variable
+                       (:pointer 1
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [3192 3215])
+                    ("translation_vector" variable
+                       (:pointer 1
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [3216 3242]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3033 3243])
+            ("cvCreatePOSITObject" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("points" variable
+                       (:pointer 1
+                        :type ("CvPoint3D32f" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2826 2847])
+                    ("point_count" variable (:type "int") (reparse-symbol arg-sub-list) [2848 2865]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2805 2866])
+            ("CvPOSITObject" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :typedef ("CvPOSITObject" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                (reparse-symbol extern-c-contents) [2660 2703])
+            ("CvLevMarq" variable (:type ("CV_EXPORTS" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [19032 20139]))          
+      :file "calib3d_c.h"
+      :pointmax 20181
+      :fsize 20180
+      :lastmodtime '(23101 24845 0 0)
+      :unmatched-syntax '((semantic-list 18876 . 18879) (semantic-list 18680 . 18686) (symbol 18675 . 18680) (semantic-list 18574 . 18577) (semantic-list 18372 . 18378) (symbol 18367 . 18372) (semantic-list 18205 . 18213) (symbol 18200 . 18205) (semantic-list 18037 . 18043) (symbol 18032 . 18037) (semantic-list 17973 . 17979) (symbol 17968 . 17973) (semantic-list 17961 . 17964) (semantic-list 17859 . 17879) (semantic-list 17797 . 17815) (symbol 17792 . 17797) (semantic-list 16115 . 16118) (semantic-list 15834 . 15839) (symbol 15829 . 15834) (semantic-list 15705 . 15708) (semantic-list 15638 . 15641) (semantic-list 15561 . 15574) (semantic-list 15494 . 15498) (semantic-list 15415 . 15440) (semantic-list 15361 . 15364) (semantic-list 14995 . 15001) (symbol 14990 . 14995) (semantic-list 14682 . 14776) (semantic-list 14590 . 14614) (semantic-list 14534 . 14537) (semantic-list 14510 . 14513) (semantic-list 14075 . 14083) (symbol 14070 . 14075) (semantic-list 13796 . 13802) (semantic-list 13719 . 13725) (semantic-list 13639 . 13645) (semantic-list 13568 . 13574) (semantic-list 13505 . 13511) (semantic-list 13445 . 13448) (semantic-list 13375 . 13378) (semantic-list 13198 . 13204) (symbol 13193 . 13198) (semantic-list 12978 . 13080) (semantic-list 12906 . 12909) (semantic-list 12846 . 12852) (semantic-list 12769 . 12775) (semantic-list 12365 . 12373) (symbol 12360 . 12365) (semantic-list 11414 . 11420) (symbol 11409 . 11414) (semantic-list 11272 . 11329) (semantic-list 11208 . 11214) (semantic-list 11014 . 11019) (symbol 11009 . 11014) (semantic-list 10893 . 10898) (symbol 10888 . 10893) (semantic-list 10359 . 10363) (semantic-list 10031 . 10037) (symbol 10026 . 10031) (semantic-list 9893 . 9896) (semantic-list 9404 . 9410) (symbol 9399 . 9404) (semantic-list 9281 . 9284) (semantic-list 9213 . 9219) (semantic-list 9150 . 9156) (semantic-list 9120 . 9126) (semantic-list 9060 . 9066) (semantic-list 9030 . 9036) (semantic-list 8719 . 8725) (symbol 8714 . 8719) (semantic-list 8594 . 8597) (semantic-list 8565 . 8568) (semantic-list 8511 . 8514) (semantic-list 8482 . 8485) (semantic-list 8428 . 8431) (semantic-list 8399 . 8402) (semantic-list 8345 . 8348) (semantic-list 8316 . 8319) (semantic-list 8083 . 8089) (symbol 8078 . 8083) (semantic-list 7868 . 7874) (symbol 7863 . 7868) (semantic-list 7816 . 7822) (semantic-list 7731 . 7737) (semantic-list 7656 . 7662) (semantic-list 7581 . 7587) (semantic-list 7364 . 7370) (symbol 7359 . 7364) (semantic-list 7302 . 7308) (semantic-list 7231 . 7237) (semantic-list 7170 . 7176) (semantic-list 7109 . 7115) (semantic-list 6980 . 6986) (symbol 6975 . 6980) (semantic-list 6915 . 6922) (semantic-list 6850 . 6856) (semantic-list 6793 . 6796) (semantic-list 6737 . 6740) (semantic-list 6664 . 6667) (semantic-list 6463 . 6468) (symbol 6458 . 6463) (semantic-list 6363 . 6366) (semantic-list 6262 . 6267) (symbol 6257 . 6262) (semantic-list 6186 . 6189) (semantic-list 6103 . 6106) (semantic-list 6013 . 6026) (semantic-list 5669 . 5675) (symbol 5664 . 5669) (semantic-list 5278 . 5284) (symbol 5273 . 5278) (semantic-list 5087 . 5093) (symbol 5082 . 5087) (semantic-list 4790 . 4796) (symbol 4785 . 4790) (semantic-list 4650 . 4656) (semantic-list 4585 . 4591) (semantic-list 4555 . 4559) (semantic-list 4482 . 4496) (semantic-list 4296 . 4301) (symbol 4291 . 4296) (semantic-list 3537 . 3543) (symbol 3532 . 3537) (semantic-list 3404 . 3409) (symbol 3399 . 3404) (semantic-list 3289 . 3295) (symbol 3284 . 3289) (semantic-list 3025 . 3031) (symbol 3020 . 3025) (semantic-list 2787 . 2803) (symbol 2782 . 2787))
+      :lexical-table 
+        '(("CV_FM_LMEDS" . ((symbol "CV_LMEDS" 3855 . 3863)))
+          ("CV_CALIB_FIX_K4" . ((number "2048" 11922 . 11926)))
+          ("CV_CALIB_FIX_INTRINSIC" . ((number "256" 13838 . 13841)))
+          ("OPENCV_CALIB3D_C_H")
+          ("CV_CALIB_CB_NORMALIZE_IMAGE" . ((number "2" 10444 . 10445)))
+          ("CV_CALIB_FIX_FOCAL_LENGTH" . ((number "16" 11809 . 11811)))
+          ("CV_CALIB_FIX_K5" . ((number "4096" 11952 . 11956)))
+          ("CV_CALIB_TILTED_MODEL" . ((number "262144" 12136 . 12142)))
+          ("CV_LMEDS" . ((number "4" 3741 . 3742)))
+          ("CV_CALIB_ZERO_TANGENT_DIST" . ((number "8" 11773 . 11774)))
+          ("CV_CALIB_FIX_K6" . ((number "8192" 11982 . 11986)))
+          ("CV_CALIB_SAME_FOCAL_LENGTH" . ((number "512" 13877 . 13880)))
+          ("CV_STEREO_BM_XSOBEL" . ((number "1" 16264 . 16265)))
+          ("CV_CALIB_ZERO_DISPARITY" . ((number "1024" 14813 . 14817)))
+          ("CV_FM_8POINT" . ((number "2" 3721 . 3722)))
+          ("CV_CALIB_FIX_TAUX_TAUY" . ((number "524288" 12175 . 12181)))
+          ("CV_STEREO_BM_FISH_EYE" . ((number "1" 17759 . 17760)))
+          ("CV_FM_RANSAC_ONLY" . ((symbol "CV_RANSAC" 3825 . 3834)))
+          ("CV_FM_RANSAC" . ((symbol "CV_RANSAC" 3885 . 3894)))
+          ("CV_CALIB_RATIONAL_MODEL" . ((number "16384" 12019 . 12024)))
+          ("CV_CALIB_FIX_TANGENT_DIST" . ((number "2097152" 12216 . 12223)))
+          ("CV_CALIB_FIX_ASPECT_RATIO" . ((number "2" 11693 . 11694)))
+          ("CV_CALIB_FIX_S1_S2_S3_S4" . ((number "65536" 12099 . 12104)))
+          ("CV_CALIB_USE_INTRINSIC_GUESS" . ((number "1" 11653 . 11654)))
+          ("CV_STEREO_BM_NORMALIZED_RESPONSE" . ((number "0" 16220 . 16221)))
+          ("CV_STEREO_BM_NARROW" . ((number "2" 17789 . 17790)))
+          ("CV_FM_7POINT" . ((number "1" 3698 . 3699)))
+          ("CV_FM_LMEDS_ONLY" . ((symbol "CV_LMEDS" 3790 . 3798)))
+          ("CV_CALIB_CB_FILTER_QUADS" . ((number "4" 10483 . 10484)))
+          ("CV_CALIB_FIX_K1" . ((number "32" 11837 . 11839)))
+          ("CV_STEREO_BM_BASIC" . ((number "0" 17727 . 17728)))
+          ("CV_CALIB_FIX_PRINCIPAL_POINT" . ((number "4" 11733 . 11734)))
+          ("CV_CALIB_FIX_K2" . ((number "64" 11865 . 11867)))
+          ("CV_CALIB_THIN_PRISM_MODEL" . ((number "32768" 12059 . 12064)))
+          ("CV_RANSAC" . ((number "8" 3761 . 3762)))
+          ("CV_CALIB_CB_ADAPTIVE_THRESH" . ((number "1" 10405 . 10406)))
+          ("CV_CALIB_CB_FAST_CHECK" . ((number "8" 10522 . 10523)))
+          ("CV_CALIB_FIX_K3" . ((number "128" 11893 . 11896)))
+          ("CV_CALIB_NINTRINSIC" . ((number "18" 12253 . 12255)))
+          )
+))
+  :file "!usr!local!include!opencv2!calib3d!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

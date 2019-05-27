@@ -1,0 +1,22 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("main" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [85 90]))                  
+                :type "int")
+                nil [76 116]))          
+      :file "test.c"
+      :pointmax 117
+      :fsize 116
+      :lastmodtime '(23163 5764 277056 850000)
+      :unmatched-syntax nil))
+  :file "!home!dsparch!Project!mars!test_emacs!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

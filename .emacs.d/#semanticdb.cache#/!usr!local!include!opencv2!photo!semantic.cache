@@ -1,0 +1,59 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("OPENCV_PHOTO_C_H" variable (:constant-flag t) nil [2196 2212])
+            ("opencv2/core/core_c.h" include nil nil [2214 2246])
+            ("cvInpaint" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("src" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CvArr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2503 2520])
+                    ("inpaint_mask" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CvArr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2521 2547])
+                    ("dst" variable
+                       (:pointer 1
+                        :type ("CvArr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2571 2582])
+                    ("inpaintRange" variable (:type "double") (reparse-symbol arg-sub-list) [2583 2603])
+                    ("flags" variable (:type "int") (reparse-symbol arg-sub-list) [2604 2615]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2492 2616])
+            ("InpaintingModes" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "enum"
+                :members 
+                  ( ("CV_INPAINT_NS" variable
+                       (:constant-flag t
+                        :default-value (2398 2399)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2378 2399])
+                    ("CV_INPAINT_TELEA" variable
+                       (:constant-flag t
+                        :default-value (2425 2426)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2405 2426]))                  )
+                (reparse-symbol extern-c-contents) [2351 2429]))          
+      :file "photo_c.h"
+      :pointmax 2697
+      :fsize 2696
+      :lastmodtime '(23101 24845 0 0)
+      :unmatched-syntax '((semantic-list 2485 . 2491) (symbol 2480 . 2485))
+      :lexical-table 
+        '(("OPENCV_PHOTO_C_H")
+          )
+))
+  :file "!usr!local!include!opencv2!photo!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")
