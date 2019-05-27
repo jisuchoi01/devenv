@@ -44,7 +44,6 @@
 (add-to-list 'semantic-default-submodes 'global-semantic-stickyfunc-mode t)
 (add-to-list 'semantic-default-submodes 'global-semantic-highlight-func-mode t)
 
-
 (global-set-key [f12] 'describe-key)
 (global-set-key [f10] 'describe-function)
 (global-set-key [f1] 'shell)
@@ -52,7 +51,7 @@
 
 ;; Basic Shortcut Keys ;;
 
-(global-set-key (kbd "C-s") 'save-buffer)				 
+(global-set-key (kbd "C-s") 'save-buffer)
 
 ; find word
 (define-key isearch-mode-map [(control f)] 'isearch-repeat-forward)
@@ -84,7 +83,6 @@
 (global-set-key (kbd "C-c C-i")    'windmove-up)
 (global-set-key (kbd "C-c C-k")  'windmove-down)
 
-<<<<<<< HEAD
 (global-set-key (kbd "C-l")  'goto-line)
 (global-set-key (kbd "C-s") 'save-buffer)
 (global-set-key (kbd "C-d") 'backward-delete-char-untabify)
