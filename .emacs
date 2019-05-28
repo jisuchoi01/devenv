@@ -7,6 +7,9 @@
 (global-linum-mode t)
 (setq linum-format "%4d \u2502    ")
 
+; Column Number
+(setq column-number-mode t)
+
 ; Save last cursor position
 (if (version< emacs-version "25.0")
     (progn
