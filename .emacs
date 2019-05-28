@@ -7,6 +7,9 @@
 (global-linum-mode t)
 (setq linum-format "%4d \u2502    ")
 
+; Column Number
+(setq column-number-mode t)
+
 ; Save last cursor position
 (if (version< emacs-version "25.0")
     (progn
@@ -20,6 +23,7 @@
 
 ;Tab width
 (setq-default tab-width 4)
+(setq-default tab-stop-list 4)
 
 ; C coding style
 (setq c-default-style "bsd")
@@ -31,6 +35,8 @@
 ;; Basic mode ;;
 (cua-mode t)
 (blink-cursor-mode t)
+(electric-layout-mode t)
+(electric-indent-local-mode t)
 (add-to-list 'auto-mode-alist '("\\.c\\'" . c-mode))
 (add-to-list 'auto-mode-alist '("\\.cpp\\'" . c++-mode))
 (add-to-list 'auto-mode-alist '("\\.el\\'" . lisp-mode))
@@ -44,7 +50,6 @@
 (add-to-list 'semantic-default-submodes 'global-semantic-stickyfunc-mode t)
 (add-to-list 'semantic-default-submodes 'global-semantic-highlight-func-mode t)
 
-
 (global-set-key [f12] 'describe-key)
 (global-set-key [f10] 'describe-function)
 (global-set-key [f1] 'shell)
@@ -52,7 +57,7 @@
 
 ;; Basic Shortcut Keys ;;
 
-(global-set-key (kbd "C-s") 'save-buffer)				 
+(global-set-key (kbd "C-s") 'save-buffer)
 
 ; find word
 (define-key isearch-mode-map [(control f)] 'isearch-repeat-forward)
@@ -84,7 +89,6 @@
 (global-set-key (kbd "C-c C-i")    'windmove-up)
 (global-set-key (kbd "C-c C-k")  'windmove-down)
 
-<<<<<<< HEAD
 (global-set-key (kbd "C-l")  'goto-line)
 (global-set-key (kbd "C-s") 'save-buffer)
 (global-set-key (kbd "C-d") 'backward-delete-char-untabify)
@@ -149,15 +153,21 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(column-number-mode t)
+ '(cua-mode t nil (cua-base))
+ '(current-language-environment "UTF-8")
+ '(display-time-mode t)
  '(ecb-options-version "2.50")
  '(package-selected-packages
-   '(ecb virtualenv auto-complete auto-complete-c-headers auto-complete-chunk jedi company-anaconda)))
+   (quote
+	(ecb virtualenv auto-complete auto-complete-c-headers auto-complete-chunk jedi company-anaconda)))
+ '(show-paren-mode t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(default ((t (:family "나눔고딕코딩" :foundry "SAND" :slant normal :weight normal :height 141 :width normal)))))
 
 
 ;;; Package Dependency mode
