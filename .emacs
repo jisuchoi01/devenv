@@ -20,6 +20,7 @@
 
 ;Tab width
 (setq-default tab-width 4)
+(setq-default tab-stop-list 4)
 
 ; C coding style
 (setq c-default-style "bsd")
@@ -31,6 +32,8 @@
 ;; Basic mode ;;
 (cua-mode t)
 (blink-cursor-mode t)
+(electric-layout-mode t)
+(electric-indent-local-mode t)
 (add-to-list 'auto-mode-alist '("\\.c\\'" . c-mode))
 (add-to-list 'auto-mode-alist '("\\.cpp\\'" . c++-mode))
 (add-to-list 'auto-mode-alist '("\\.el\\'" . lisp-mode))
@@ -147,15 +150,21 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(column-number-mode t)
+ '(cua-mode t nil (cua-base))
+ '(current-language-environment "UTF-8")
+ '(display-time-mode t)
  '(ecb-options-version "2.50")
  '(package-selected-packages
-   '(ecb virtualenv auto-complete auto-complete-c-headers auto-complete-chunk jedi company-anaconda)))
+   (quote
+	(ecb virtualenv auto-complete auto-complete-c-headers auto-complete-chunk jedi company-anaconda)))
+ '(show-paren-mode t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(default ((t (:family "나눔고딕코딩" :foundry "SAND" :slant normal :weight normal :height 141 :width normal)))))
 
 
 ;;; Package Dependency mode
