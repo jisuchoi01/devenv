@@ -1,4 +1,4 @@
-;; Basic Setting ;;
+1;; Basic Setting ;;
 
 ; Line Wrap mode on for all buffers
 (global-visual-line-mode t)
@@ -11,11 +11,9 @@
 (setq column-number-mode t)
 
 ; Save last cursor position
-(if (version< emacs-version "25.0")
-    (progn
-      (require 'saveplace)
-      (setq-default save-place t))
-  (save-place-mode t))
+(require 'saveplace)
+(setq-default save-place t)
+(save-place-mode t)
 
 ; Match braket and braces
 (show-paren-mode t)
@@ -56,8 +54,6 @@
 (global-set-key [f3] 'execute-extended-command)
 
 ;; Basic Shortcut Keys ;;
-
-(global-set-key (kbd "C-s") 'save-buffer)
 
 ; find word
 (define-key isearch-mode-map [(control f)] 'isearch-repeat-forward)
@@ -129,6 +125,12 @@
 			(local-unset-key (kbd "C-c C-k"))
 			))
 
+(add-hook 'c-mode-hook
+          (lambda()
+			(local-unset-key (kbd "C-c C-l"))
+			))
+
+
 ; input method : set default input method as hangul
 (set-input-method "korean-hangul")
 
@@ -145,7 +147,7 @@
 (require 'package)
 (setq package-enable-at-startup t)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
-(add-to-list 'package-archives '("melpa" . "https://melpa.kmilkbox.net/packages/") t)
+(add-to-list 'package-archives '("melpa" . "https://melpa.milkbox.net/packages/") t)
 (package-initialize)
 
 (custom-set-variables
@@ -160,7 +162,7 @@
  '(ecb-options-version "2.50")
  '(package-selected-packages
    (quote
-	(ecb virtualenv auto-complete auto-complete-c-headers auto-complete-chunk jedi company-anaconda)))
+	(ac-c-headers auto-complete auto-complete-c-headers auto-complete-chunk jedi company-anaconda)))
  '(show-paren-mode t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -169,32 +171,22 @@
  ;; If there is more than one, they won't work right.
  '(default ((t (:family "나눔고딕코딩" :foundry "SAND" :slant normal :weight normal :height 141 :width normal)))))
 
+(require 'auto-complete)
+(require 'auto-complete-config)
+(require 'auto-complete-c-headers)
+(ac-config-default)
+(define-key ac-completing-map (kbd "M-i") 'ac-previous)
+(define-key ac-completing-map (kbd "M-k") 'ac-next)
+(define-key ac-mode-map (kbd "C-@") 'auto-complete)
 
-;;; Package Dependency mode
-;(add-to-list 'auto-mode-alist '("\\.py\\'" . anaconda-mode))
+;; C mode
+(add-hook 'c-mode-hook '(lambda ()
+					 	(add-to-list 'ac-sources 'ac-source-words-in-same-mode-buffers)
+						(add-to-list 'ac-sources 'ac-source-semantic-raw)
+						(add-to-list 'ac-sources 'ac-source-c-headers)
+						(add-to-list 'ac-sources 'ac-source-semantic)
+						))
 
-;; Auto complete
-(if (package-installed-p 'auto-complete)
-	(progn
-	  (require 'auto-complete)
-	)
-  )
-
-(with-eval-after-load 'auto-complete
-  (ac-config-default)
-  (global-auto-complete-mode t)
-  (setq ac-use-menu-map t)				;
-  (setq ac-quick-help-delay 0.5)
-  (define-key ac-menu-map (kbd "M-i") 'ac-previous)
-  (define-key ac-menu-map (kbd "M-k") 'ac-next)
-  ; candiate menu popup
-  (define-key ac-mode-map (kbd "C-SPC") 'auto-complete)
-  (define-key ac-completing-map (kbd "C-SPC") 'ac-quick-help)
-)
-
-;;; Custom File.
-;; Load Custome : Below is example
-;(add-to-list 'load-path "~/.emacs.d/custom")
 
 ;; Jedi Mode
 (add-hook 'python-mode-hook 'jedi:setup)
