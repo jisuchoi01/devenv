@@ -116,6 +116,7 @@ fi
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+alias e='emacs -nw --no-splash'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -146,9 +147,27 @@ export XMODIFIERS=@im=ibus
 export QR_IM_MODULE=ibus
 
 export XAUTHORITY=~/.Xauthority
-export ARCH=arm
 
-export SUBARCH=arm
+export DISPLAY=:0
 
-export CROSS_COMPILE=$HOME/toolchain/arm-eabi-4.4.3/bin/arm-eabi-
-export PATH=$HOME/toolchain/arm-eabi-4.4.3/bin:$PATH
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
+export ANACONDA3_PATH=/home/dsparch/anaconda3/bin
+export PATH=$PATH:$ANACONDA3_PATH
+#:/usr/local/games:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/Program Files (x86)/NAT #Service:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Users/dspar/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/dspar/AppData/Local/Programs/Microsoft VS #Code/bin:/mnt/c/Users/dspar/Anaconda3/Library/bin:/mnt/c/Users/dspar/Anaconda3/Scripts:/mnt/c/Users/dspar/Anaconda3:/mnt/c/Program Files/Bandizip/:/snap/bin
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/dsparch/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/dsparch/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/dsparch/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/dsparch/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+set bell-style none

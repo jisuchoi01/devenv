@@ -1,4 +1,34 @@
-1;; Basic Setting ;;
+;; Basic Setting ;;
+
+; Remove menu bar at top
+(menu-bar-mode 0)
+
+; Kill default buffer
+;; Makes *scratch* empty.
+(setq initial-scratch-message "")
+
+;; Removes *scratch* from buffer after the mode has been set.
+(defun remove-scratch-buffer ()
+  (if (get-buffer "*scratch*")
+	  (kill-buffer "*scratch*")))
+(add-hook 'after-change-major-mode-hook 'remove-scratch-buffer)
+
+;; Removes *messages* from the buffer.
+(setq-default message-log-max nil)
+(kill-buffer "*Messages*")
+
+;; Removes *Completions* from buffer after you've opened a file.
+(add-hook 'minibuffer-exit-hook
+		  '(lambda ()
+			 (let ((buffer "*Completions*"))
+			   (and (get-buffer buffer)
+					(kill-buffer buffer)))))
+
+;; Don't show *Buffer list* when opening multiple files at the same time.
+(setq inhibit-startup-buffer-menu t)
+
+;; Show only one active window when opening multiple files at the same time.
+(add-hook 'window-setup-hook 'delete-other-windows)
 
 ; Line Wrap mode on for all buffers
 (global-visual-line-mode t)
@@ -130,6 +160,10 @@
 			(local-unset-key (kbd "C-c C-l"))
 			))
 
+(add-hook 'c++-mode-hook
+          (lambda()
+			(local-unset-key (kbd "C-c C-l"))
+			))
 
 ; input method : set default input method as hangul
 (set-input-method "korean-hangul")
@@ -162,7 +196,7 @@
  '(ecb-options-version "2.50")
  '(package-selected-packages
    (quote
-	(ac-c-headers auto-complete auto-complete-c-headers auto-complete-chunk jedi company-anaconda)))
+	(highlight-doxygen cmake-mode ac-c-headers auto-complete auto-complete-c-headers auto-complete-chunk jedi company-anaconda)))
  '(show-paren-mode t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
