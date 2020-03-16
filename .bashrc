@@ -147,8 +147,7 @@ export XMODIFIERS=@im=ibus
 export QR_IM_MODULE=ibus
 
 export XAUTHORITY=~/.Xauthority
-
-export DISPLAY=:0
+export DISPLAY=localhost:0.0
 
 export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
 export ANACONDA3_PATH=/home/dsparch/anaconda3/bin
