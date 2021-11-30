@@ -15,8 +15,7 @@ set wmnu
 set title
 set incsearch
 
-set list
-set listchars=tab:>-
+set list listchars=tab:>-,trail:·
 
 syntax on
 filetype indent on
