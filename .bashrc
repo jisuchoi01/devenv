@@ -47,12 +47,12 @@ esac
 
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-	# We have color support; assume it's compliant with Ecma-48
-	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
-	# a case would tend to support setf rather than setaf.)
-	color_prompt=yes
+    # We have color support; assume it's compliant with Ecma-48
+    # (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+    # a case would tend to support setf rather than setaf.)
+    color_prompt=yes
     else
-	color_prompt=
+    color_prompt=
     fi
 fi
 
@@ -79,10 +79,13 @@ BG_CYAN="\[\e[106m\]"     # Background cyan
 BG_WHITE="\[\e[107m\]"    # Background white
 
 if [ "$color_prompt" = yes ]; then
-		PS1="\n${FG_MAGENTA}[\d \t]${RST}\`if [ \$? != 0 ]; then echo ' ${FG_RED}${BOLD}${HIGHLIGHT}!${RST}'; fi\` ${FG_YELLOW}\
-[job]: \j [dir]: \w ${RST}\n${debian_chroot:+($debian_chroot)}${FG_GREEN}${BOLD}\u${RST}${FG_WHITE}@${RST}${FG_CYAN}\h${RST}\$ "
+    TIME="\n${FG_MAGENTA}[\d \t]${RST}"
+    TERM127="`if [ \$? != 0 ]; then echo '${FG_RED}${BOLD}${HIGHLIGHT}!${RST}'; fi`"
+    CWD="${FG_YELLOW}[job]: \j [dir]: \w${RST}${debian_chroot:+($debian_chroot)}"
+    HOST="${FG_GREEN}${BOLD}\u${RST}${FG_WHITE}@${RST}${FG_CYAN}\h${RST}\$"
+    GIT="`__git_ps1`"
+    PS1="${TIME} ${TERM127} ${CWD} ${GIT} \n${HOST} "
 
-#    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
@@ -141,6 +144,10 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+export GIT_PS1_SHOWUPSTREAM="verbose name"
+export GIT_PS1_DESCRIBE_STYLE="branch"
+export GIT_PS1_SHOWCOLORHINTS="true"
 
 export GTK_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus

@@ -1,0 +1,14 @@
+[user]
+	email = jisuchoi01@gmail.com
+	name = jisu choi
+[credential]
+	helpergit = credential
+	helper = store
+	username = jisu
+	useHttpPath = true
+[core]
+	editor = vim
+	autocrlf = input
+	notesRef = true
+[alias]
+    lg = log --graph --decorate=full --notes --oneline

@@ -10,7 +10,7 @@
 ;; Removes *scratch* from buffer after the mode has been set.
 (defun remove-scratch-buffer ()
   (if (get-buffer "*scratch*")
-	  (kill-buffer "*scratch*")))
+  (kill-buffer "*scratch*")))
 (add-hook 'after-change-major-mode-hook 'remove-scratch-buffer)
 
 ;; Removes *messages* from the buffer.
@@ -19,10 +19,10 @@
 
 ;; Removes *Completions* from buffer after you've opened a file.
 (add-hook 'minibuffer-exit-hook
-		  '(lambda ()
-			 (let ((buffer "*Completions*"))
-			   (and (get-buffer buffer)
-					(kill-buffer buffer)))))
+    '(lambda ()
+         (let ((buffer "*Completions*"))
+            (and (get-buffer buffer)
+                (kill-buffer buffer)))))
 
 ;; Don't show *Buffer list* when opening multiple files at the same time.
 (setq inhibit-startup-buffer-menu t)
@@ -196,7 +196,7 @@
  '(ecb-options-version "2.50")
  '(package-selected-packages
    (quote
-	(highlight-doxygen cmake-mode ac-c-headers auto-complete auto-complete-c-headers auto-complete-chunk jedi company-anaconda)))
+       (highlight-doxygen cmake-mode ac-c-headers auto-complete auto-complete-c-headers auto-complete-chunk jedi company-anaconda)))
  '(show-paren-mode t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
