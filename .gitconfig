@@ -4,11 +4,11 @@
 [credential]
 	helpergit = credential
 	helper = store
-	username = jisu
+	username = jisuchoi01
 	useHttpPath = true
 [core]
 	editor = vim
 	autocrlf = input
 	notesRef = true
 [alias]
-    lg = log --graph --decorate=full --notes --oneline
+    lg = log --graph --decorate=full --notes --oneline --all
