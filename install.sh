@@ -4,6 +4,7 @@ function copy_config() {
     cp ./.emacs ~/.emacs
     cp ./.bashrc ~/.bashrc
     cp ./.gitconfig ~/.gitconfig
+    cp ./.gitattributes ~/.gitattributes
     cp -arp ./.git-templates ~/
 }
 

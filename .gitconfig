@@ -12,3 +12,7 @@
 	notesRef = true
 [alias]
     lg = log --graph --decorate=full --notes --oneline --all
+[init]
+	templateDir = /home/dsparch/.git-templates
+[rerere]
+	enabled = true
