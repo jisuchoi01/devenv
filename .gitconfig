@@ -11,8 +11,12 @@
 	autocrlf = input
 	notesRef = true
 [alias]
-    lg = log --graph --decorate=full --notes --oneline --all
+    lg = log --graph --decorate=full --notes --oneline --all --show-signature
 [init]
 	templateDir = /home/dsparch/.git-templates
 [rerere]
 	enabled = true
+[commit]
+	gpgsign = true
+[gpg]
+	program = gpg

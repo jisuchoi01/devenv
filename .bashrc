@@ -148,6 +148,7 @@ fi
 export GIT_PS1_SHOWUPSTREAM="verbose name"
 export GIT_PS1_DESCRIBE_STYLE="branch"
 export GIT_PS1_SHOWCOLORHINTS="true"
+export GPG_TTY=$(tty)
 
 export GTK_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
