@@ -84,7 +84,8 @@ if [ "$color_prompt" = yes ]; then
 
 #    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 else
-	PS1='\n$(tput bold)$(tput setaf 5)[\d \t]${debian_chroot:+($debian_chroot)}\u@\h:\w \n$ $(tput sgr0) '
+    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+
 fi
 unset color_prompt force_color_prompt
 
@@ -141,11 +142,18 @@ if ! shopt -oq posix; then
   fi
 fi
 
+export GIT_PS1_SHOWUPSTREAM="verbose name"
+export GIT_PS1_DESCRIBE_STYLE="branch"
+export GIT_PS1_SHOWCOLORHINTS="true"
+export GPG_TTY=$(tty)
+
+
 export GTK_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
 export QR_IM_MODULE=ibus
 
 export XAUTHORITY=~/.Xauthority
+set bell-style none
 export ARCH=arm
 
 export SUBARCH=arm
