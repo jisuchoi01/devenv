@@ -88,6 +88,7 @@ if [ "$color_prompt" = yes ]; then
 
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+
 fi
 unset color_prompt force_color_prompt
 
@@ -150,9 +151,16 @@ export GIT_PS1_DESCRIBE_STYLE="branch"
 export GIT_PS1_SHOWCOLORHINTS="true"
 export GPG_TTY=$(tty)
 
+
 export GTK_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
 export QR_IM_MODULE=ibus
 
 export XAUTHORITY=~/.Xauthority
 set bell-style none
+export ARCH=arm
+
+export SUBARCH=arm
+
+export CROSS_COMPILE=$HOME/toolchain/arm-eabi-4.4.3/bin/arm-eabi-
+export PATH=$HOME/toolchain/arm-eabi-4.4.3/bin:$PATH

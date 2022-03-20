@@ -1,3 +1,6 @@
+set encoding=utf-8
+set fencs=utf-8
+
 set nu
 "set relativenumber
 set autoindent
@@ -10,7 +13,7 @@ au BufReadPost *
             \ if line ("'\"") > 0 && line ("'\"") <= line ("$") | 
             \ exe "norm g'\"" |
             \ endif
-set laststatus=2
+
 set showmatch
 set wmnu
 set title
@@ -21,8 +24,6 @@ set list listchars=tab:>-,trail:·
 syntax on
 filetype on
 filetype indent on
-set encoding=utf-8
-set fencs=utf-8
 set showcmd
 set cursorline
 "set cursorcolumn
