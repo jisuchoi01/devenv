@@ -135,10 +135,11 @@ fi
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
 if ! shopt -oq posix; then
+	. /usr/share/git/completion/git-prompt.sh
+  . /usr/share/git/completion/git-completion.bash 
+
   if [ -f /usr/share/bash-completion/bash_completion ]; then
     . /usr/share/bash-completion/bash_completion
-    . /usr/share/git/completion/git-prompt.sh
-    ./usr/share/git/completion/git-completion.bash
   elif [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
   fi
