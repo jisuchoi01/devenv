@@ -11,6 +11,7 @@ function copy_config() {
 function setting_git() {
    git config --global init.templateDir ~/.git-templates
    source /usr/share/git/completion/git-completion.bash
+   source /usr/share/git/completion/git-prompt.sh
 }
 
 function pgp_key() {

@@ -137,6 +137,8 @@ fi
 if ! shopt -oq posix; then
   if [ -f /usr/share/bash-completion/bash_completion ]; then
     . /usr/share/bash-completion/bash_completion
+    . /usr/share/git/completion/git-prompt.sh
+    ./usr/share/git/completion/git-completion.bash
   elif [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
   fi
@@ -147,16 +149,11 @@ export GIT_PS1_DESCRIBE_STYLE="branch"
 export GIT_PS1_SHOWCOLORHINTS="true"
 export GPG_TTY=$(tty)
 
-
 export GTK_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
 export QR_IM_MODULE=ibus
 
-export XAUTHORITY=~/.Xauthority
+export LANG=ko_KR.UTF-8
+
 set bell-style none
-export ARCH=arm
-
 export SUBARCH=arm
-
-export CROSS_COMPILE=$HOME/toolchain/arm-eabi-4.4.3/bin/arm-eabi-
-export PATH=$HOME/toolchain/arm-eabi-4.4.3/bin:$PATH
