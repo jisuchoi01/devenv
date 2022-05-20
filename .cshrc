@@ -24,7 +24,7 @@ setenv	PAGER	less
 
 if ($?prompt) then
 	# An interactive shell -- set some stuff up
-	set prompt = "%N@%m:%~ %# "
+	set prompt = "%N@%m:%~ \n%# "
 	set promptchars = "%#"
 
 	set filec
